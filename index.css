@@ -1,0 +1,66 @@
+body {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes square-animation-1 {
+    from {
+        border: solid 0.2rem #ffffff;
+        opacity: 0;
+        transform:translateY(3rem) rotate(0deg);
+    }
+    to {
+        border: solid 0.2rem #ffffff;
+        opacity: 1;
+        transform:translateY(3rem) rotate(45deg);
+    }
+}
+
+@keyframes square-animation-2 {
+    0% {
+        transform:translateY(3rem) rotate(45deg);
+    }
+
+    50% {
+        transform:translateY(2rem) rotate(45deg);
+    }
+
+    100% {
+        transform:translateY(3rem) rotate(45deg);
+    }
+}
+
+
+.square {
+    width: 15rem;
+    height: 15rem;
+
+    margin: 0 auto;
+
+    border: solid 0.2rem #000000;
+    transform:translateY(3rem) rotate(45deg);
+
+    animation: square-animation-1 2s 0.5s alternate forwards, square-animation-2 6s 3s infinite;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.name {
+    transform: translateY(130%);
+
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 40pt;
+    animation-name: fadein;
+    animation-duration: 2s;
+}
