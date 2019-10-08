@@ -8,22 +8,6 @@ body {
     align-items: center;
 }
 
-
-@keyframes square-animation-2 {
-    0% {
-        transform:translateY(0rem) rotate(45deg);
-    }
-
-    50% {
-        transform:translateY(-1rem) rotate(45deg);
-    }
-
-    100% {
-        transform:translateY(0rem) rotate(45deg);
-    }
-}
-
-
 .square {
     width: 15rem;
     height: 15rem;
@@ -35,23 +19,12 @@ body {
     border: solid 0.2rem white;
 }
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
 .name {
     position: relative;
     top: 7.5rem;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 40pt;
-    animation-name: fadein;
-    animation-duration: 2s;
+    opacity: 0;
 }
 
 .icons {
@@ -62,6 +35,8 @@ body {
     width: 50%;
     top: 9rem;
     left: 25%;
+
+    opacity: 0;
 }
 
 .twitter-icon {
@@ -69,9 +44,6 @@ body {
     height: 3rem;
     position: relative;
 
-    opacity: 0;
-
-    animation: fadein 2s 1.5s alternate forwards ;
     background-image: url("assets/Twitter_Social_Icon_Circle_White.svg");
 }
 
@@ -79,8 +51,5 @@ body {
     width: 3rem;
     height: 3rem;
 
-    opacity: 0;
     fill: white;
-
-    animation: fadein 2s 1.5s alternate forwards ;
 }

@@ -1,11 +1,12 @@
-let SquareAnimationID;
-
 $(function(){
     setTimeout(First_Square_Animation, 500);
+    setTimeout(function(){$(".icons").animate({opacity:1}, 2000)}, 1000);
     setTimeout(function() {
         Moving_Square_Animation();
-        SquareAnimationID = setInterval(Moving_Square_Animation, 6000);
+        setInterval(Moving_Square_Animation, 6000);
     }, 2500);
+
+    $(".name").animate({opacity: 1}, 2000);
 });
 
 function First_Square_Animation(){
@@ -21,6 +22,4 @@ function Moving_Square_Animation() {
     $(".square")
         .animate({top: "-=1rem"}, 3000)
         .animate({top: "+=1rem"}, 3000);
-
-
 }
