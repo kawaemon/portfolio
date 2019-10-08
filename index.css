@@ -8,18 +8,6 @@ body {
     align-items: center;
 }
 
-@keyframes square-animation-1 {
-    from {
-        border: solid 0.2rem white;
-        opacity: 0;
-        transform:rotate(0deg);
-    }
-    to {
-        border: solid 0.2rem white;
-        opacity: 1;
-        transform:rotate(45deg);
-    }
-}
 
 @keyframes square-animation-2 {
     0% {
@@ -42,12 +30,9 @@ body {
     top: 3rem;
     position: relative;
 
-    margin: 0 auto;
 
-    border: solid 0.2rem black;
-    transform: rotate(45deg);
-
-    animation: square-animation-1 2s 0.5s alternate forwards, square-animation-2 6s 3s infinite;
+    opacity: 0;
+    border: solid 0.2rem white;
 }
 
 @keyframes fadein {
