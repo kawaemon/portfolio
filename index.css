@@ -1,35 +1,37 @@
 body {
     background: black;
     color: white;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 @keyframes square-animation-1 {
     from {
-        border: solid 0.2rem #ffffff;
+        border: solid 0.2rem white;
         opacity: 0;
-        transform:translateY(3rem) rotate(0deg);
+        transform:rotate(0deg);
     }
     to {
-        border: solid 0.2rem #ffffff;
+        border: solid 0.2rem white;
         opacity: 1;
-        transform:translateY(3rem) rotate(45deg);
+        transform:rotate(45deg);
     }
 }
 
 @keyframes square-animation-2 {
     0% {
-        transform:translateY(3rem) rotate(45deg);
+        transform:rotate(45deg);
     }
 
     50% {
-        transform:translateY(2rem) rotate(45deg);
+        transform:rotate(45deg);
     }
 
     100% {
-        transform:translateY(3rem) rotate(45deg);
+        transform:rotate(45deg);
     }
 }
 
@@ -37,11 +39,13 @@ body {
 .square {
     width: 15rem;
     height: 15rem;
+    top: 3rem;
+    position: relative;
 
     margin: 0 auto;
 
-    border: solid 0.2rem #000000;
-    transform:translateY(3rem) rotate(45deg);
+    border: solid 0.2rem black;
+    transform: rotate(45deg);
 
     animation: square-animation-1 2s 0.5s alternate forwards, square-animation-2 6s 3s infinite;
 }
@@ -55,10 +59,20 @@ body {
     }
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+    top: 6rem;
+    left: 25%;
+}
+
 
 .name {
-    transform: translateY(130%);
-
+    position: relative;
+    top: 6rem;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 40pt;
     animation-name: fadein;
@@ -68,8 +82,7 @@ body {
 .twitter-icon {
     width: 3rem;
     height: 3rem;
-
-    transform: translateY(250%);
+    position: relative;
 
     opacity: 0;
 
@@ -82,10 +95,7 @@ body {
     height: 3rem;
 
     opacity: 0;
-
     fill: white;
-
-    transform: translateY(150%) translateX(450%);
 
     animation: fadein 2s 1.5s alternate forwards ;
 }
