@@ -23,15 +23,15 @@ body {
 
 @keyframes square-animation-2 {
     0% {
-        transform:rotate(45deg);
+        transform:translateY(0rem) rotate(45deg);
     }
 
     50% {
-        transform:rotate(45deg);
+        transform:translateY(-1rem) rotate(45deg);
     }
 
     100% {
-        transform:rotate(45deg);
+        transform:translateY(0rem) rotate(45deg);
     }
 }
 
