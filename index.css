@@ -64,3 +64,15 @@ body {
     animation-name: fadein;
     animation-duration: 2s;
 }
+
+.twitter-icon {
+    width: 3rem;
+    height: 3rem;
+
+    transform: translateY(250%);
+
+    opacity: 0;
+
+    animation: fadein 2s 1.5s alternate forwards ;
+    background-image: url("Twitter_Social_Icon_Circle_White.svg");
+}
