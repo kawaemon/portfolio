@@ -59,24 +59,24 @@ body {
     }
 }
 
+
+.name {
+    position: relative;
+    top: 7.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 40pt;
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
 .icons {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     position: relative;
     width: 50%;
-    top: 6rem;
+    top: 9rem;
     left: 25%;
-}
-
-
-.name {
-    position: relative;
-    top: 6rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 40pt;
-    animation-name: fadein;
-    animation-duration: 2s;
 }
 
 .twitter-icon {
