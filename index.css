@@ -46,7 +46,7 @@ body {
     height: 3rem;
     position: relative;
 
-    background-image: url("assets/Twitter_Social_Icon_Circle_White.svg");
+    fill: white;
 }
 
 .github-icon {
