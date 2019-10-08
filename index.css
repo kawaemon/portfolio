@@ -74,5 +74,5 @@ body {
     opacity: 0;
 
     animation: fadein 2s 1.5s alternate forwards ;
-    background-image: url("Twitter_Social_Icon_Circle_White.svg");
+    background-image: url("assets/Twitter_Social_Icon_Circle_White.svg");
 }
