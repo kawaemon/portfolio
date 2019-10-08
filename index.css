@@ -76,3 +76,16 @@ body {
     animation: fadein 2s 1.5s alternate forwards ;
     background-image: url("assets/Twitter_Social_Icon_Circle_White.svg");
 }
+
+.github-icon {
+    width: 3rem;
+    height: 3rem;
+
+    opacity: 0;
+
+    fill: white;
+
+    transform: translateY(150%) translateX(450%);
+
+    animation: fadein 2s 1.5s alternate forwards ;
+}
