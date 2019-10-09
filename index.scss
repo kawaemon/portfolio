@@ -1,11 +1,15 @@
+@mixin flex($direction: column, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $align;
+}
+
 body {
+    @include flex();
+
+    align-items: center;
     background: black;
     color: white;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .square {
@@ -29,9 +33,8 @@ body {
 }
 
 .icons {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    @include flex(row, space-between);
+
     position: relative;
 
     width: 50%;
@@ -41,7 +44,7 @@ body {
     opacity: 0;
 }
 
-.twitter-icon {
+.twitter-icon , .github-icon{
     width: 3rem;
     height: 3rem;
     position: relative;
@@ -49,9 +52,3 @@ body {
     fill: white;
 }
 
-.github-icon {
-    width: 3rem;
-    height: 3rem;
-
-    fill: white;
-}
