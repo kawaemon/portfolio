@@ -10,12 +10,12 @@ body {
 
 @keyframes square-animation-1 {
     from {
-        border: solid 0.2rem white;
+        border: solid 0.5rem white;
         opacity: 0;
         transform:rotate(0deg);
     }
     to {
-        border: solid 0.2rem white;
+        border: solid 0.5rem white;
         opacity: 1;
         transform:rotate(45deg);
     }
@@ -44,7 +44,7 @@ body {
 
     margin: 0 auto;
 
-    border: solid 0.2rem black;
+    border: solid 0.5rem black;
     transform: rotate(45deg);
 
     animation: square-animation-1 2s 0.5s alternate forwards, square-animation-2 6s 3s infinite;
@@ -98,4 +98,22 @@ body {
     fill: white;
 
     animation: fadein 2s 1.5s alternate forwards ;
+}
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+    color: gray;
+
+    opacity: 0;
+    animation: fadein 2s alternate forwards ;
+
 }
