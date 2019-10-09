@@ -13,8 +13,13 @@ $(function(){
     $(".twitter-icon").hover(
         function() {
             $(".twitter-icon").stop().animate({fill: "#1DA1F2"}, 200);
+            $(".twitter-icon-background").stop().animate({opacity: 1}, 200);
+
         },
-        function() {$(".twitter-icon").stop().animate({fill: "white"}, 200);
+        function() {
+            $(".twitter-icon").stop().animate({fill: "white"}, 200);
+            $(".twitter-icon-background").stop().animate({opacity: 0}, 200);
+
         }
     )
 });
