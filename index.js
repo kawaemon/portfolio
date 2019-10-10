@@ -7,6 +7,7 @@ $(function(){
 
     $(".name").animate({opacity: 1}, 2000);
     $(".twitter-icon").hover(Twitter_Icon_Hover_EventHandler, Twitter_Icon_HoverOut_EventHandler);
+    $(".github-icon").hover(Github_Icon_Hover_EventHandler, Github_Icon_HoverOut_EventHandler);
 });
 
 function First_Square_Animation(){
@@ -30,4 +31,14 @@ function Twitter_Icon_Hover_EventHandler() {
 function Twitter_Icon_HoverOut_EventHandler() {
     $(".twitter-icon").stop().animate({fill: "white"}, 200);
     $(".twitter-icon-background").stop().animate({opacity: 0}, 200);
+}
+
+function Github_Icon_Hover_EventHandler() {
+    $(".github-icon").stop().animate({opacity: 0}, 200);
+    $(".github-icon-background").stop().animate({opacity: 1}, 200);
+}
+
+function Github_Icon_HoverOut_EventHandler() {
+    $(".github-icon").stop().animate({opacity: 1}, 200);
+    $(".github-icon-background").stop().animate({opacity: 0}, 200);
 }

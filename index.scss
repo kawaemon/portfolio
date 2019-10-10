@@ -4,7 +4,7 @@
     justify-content: $align;
 }
 
-body {
+.body {
     @include flex();
 
     align-items: center;
@@ -36,30 +36,24 @@ body {
     @include flex(row, space-between);
 
     position: relative;
-
-    width: 50%;
-    left: 25%;
+    width: 8rem;
     top: 9rem;
-
     opacity: 0;
 }
 
-.twitter-icon {
+.twitter-icon, .github-icon {
     width: 3rem;
     height: 3rem;
-    position: absolute;
+    position: relative;
 
     fill: white;
 }
 
-.twitter-icon-background {
+.twitter-icon-background, .github-icon-background {
     @extend .twitter-icon;
+    position: absolute;
     opacity: 0;
 }
 
-.github-icon{
-    @extend .twitter-icon;
-    position: relative;
-}
 
 
