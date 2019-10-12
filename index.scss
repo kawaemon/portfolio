@@ -4,6 +4,10 @@
     justify-content: $align;
 }
 
+html {
+    font-size: 1.5vmin;
+}
+
 .body {
     @include flex();
 
@@ -27,7 +31,7 @@
     top: 7.5rem;
 
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 40pt;
+    font-size: 4rem;
 
     opacity: 0;
 }
