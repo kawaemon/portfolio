@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 1.5vmin;
+    font-size: 2vmin;
 }
 
 .body {
@@ -40,12 +40,12 @@ html {
     @include flex(row, space-between);
 
     position: relative;
-    width: 8rem;
+    width: 12rem;
     top: 9rem;
     opacity: 0;
 }
 
-.twitter-icon, .github-icon {
+.twitter-icon, .github-icon, .intro-icon {
     width: 3rem;
     height: 3rem;
     position: relative;
