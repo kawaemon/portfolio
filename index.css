@@ -47,7 +47,7 @@ html {
   position: absolute;
   opacity: 0; }
 
-.Footer {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
