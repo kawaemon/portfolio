@@ -1,119 +1,62 @@
-body {
-    background: black;
-    color: white;
+html {
+  font-size: 2vmin; }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@keyframes square-animation-1 {
-    from {
-        border: solid 0.5rem white;
-        opacity: 0;
-        transform:rotate(0deg);
-    }
-    to {
-        border: solid 0.5rem white;
-        opacity: 1;
-        transform:rotate(45deg);
-    }
-}
-
-@keyframes square-animation-2 {
-    0% {
-        transform:translateY(0rem) rotate(45deg);
-    }
-
-    50% {
-        transform:translateY(-1rem) rotate(45deg);
-    }
-
-    100% {
-        transform:translateY(0rem) rotate(45deg);
-    }
-}
-
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white; }
 
 .square {
-    width: 15rem;
-    height: 15rem;
-    top: 3rem;
-    position: relative;
+  width: 15rem;
+  height: 15rem;
+  top: 7rem;
+  position: relative;
+  opacity: 0;
+  border: solid 0.5rem white; }
 
-    margin: 0 auto;
+.name, .comingsoon {
+  position: relative;
+  top: 11.5rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 4rem;
+  opacity: 0; }
 
-    border: solid 0.5rem black;
-    transform: rotate(45deg);
-
-    animation: square-animation-1 2s 0.5s alternate forwards, square-animation-2 6s 3s infinite;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-.name {
-    position: relative;
-    top: 7.5rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 40pt;
-    animation-name: fadein;
-    animation-duration: 2s;
-}
+.comingsoon {
+  top: 17rem;
+  font-size: 1rem; }
 
 .icons {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    position: relative;
-    width: 50%;
-    top: 9rem;
-    left: 25%;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 12rem;
+  top: 13rem;
+  opacity: 0; }
 
-.twitter-icon {
-    width: 3rem;
-    height: 3rem;
-    position: relative;
+.twitter-icon, .twitter-icon-background, .github-icon-background, .github-icon, .intro-icon {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  fill: white; }
 
-    opacity: 0;
-
-    animation: fadein 2s 1.5s alternate forwards ;
-    background-image: url("assets/Twitter_Social_Icon_Circle_White.svg");
-}
-
-.github-icon {
-    width: 3rem;
-    height: 3rem;
-
-    opacity: 0;
-    fill: white;
-
-    animation: fadein 2s 1.5s alternate forwards ;
-}
+.twitter-icon-background, .github-icon-background {
+  position: absolute;
+  opacity: 0; }
 
 .Footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  color: gray;
+  opacity: 0; }
 
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-
-    color: gray;
-
-    opacity: 0;
-    animation: fadein 2s alternate forwards ;
-
-}
+/*# sourceMappingURL=index.css.map */
