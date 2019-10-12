@@ -18,8 +18,8 @@ $(function(){
 
     $(".name").animate({opacity: 1}, 2000);
 
-    twitter_icon.hover(Twitter_Icon_Hover_EventHandler, Twitter_Icon_HoverOut_EventHandler);
-    github_icon.hover(Github_Icon_Hover_EventHandler, Github_Icon_HoverOut_EventHandler);
+    twitter_icon.hover(() => Twitter_Icon_Hover_EventHandler(true), () => Twitter_Icon_Hover_EventHandler(false));
+    github_icon.hover(() => Github_Icon_Hover_EventHandler(true), () => Github_Icon_Hover_EventHandler(false));
     intro_button.click(ComingSoon_Handler);
 });
 
@@ -35,24 +35,14 @@ function Moving_Square_Animation() {
           .animate({top: "+=1rem"}, 3000);
 }
 
-function Twitter_Icon_Hover_EventHandler() {
-    twitter_icon.stop().animate({fill: "#1DA1F2"}, 200);
-    twitter_icon_bg.stop().animate({opacity: 1}, 200);
+function Twitter_Icon_Hover_EventHandler(t) {
+    twitter_icon.stop().animate({fill: t ? "#1DA1F2" : "white"}, 200);
+    twitter_icon_bg.stop().animate({opacity: t ? 1 : 0}, 200);
 }
 
-function Twitter_Icon_HoverOut_EventHandler() {
-    twitter_icon.stop().animate({fill: "white"}, 200);
-    twitter_icon_bg.stop().animate({opacity: 0}, 200);
-}
-
-function Github_Icon_Hover_EventHandler() {
-    github_icon.stop().animate({opacity: 0}, 200);
-    github_icon_bg.stop().animate({opacity: 1}, 200);
-}
-
-function Github_Icon_HoverOut_EventHandler() {
-    github_icon.stop().animate({opacity: 1}, 200);
-    github_icon_bg.stop().animate({opacity: 0}, 200);
+function Github_Icon_Hover_EventHandler(t) {
+    github_icon.stop().animate({opacity: t ? 0 : 1}, 200);
+    github_icon_bg.stop().animate({opacity: t ? 1 : 0}, 200);
 }
 
 let isViewable = false;
