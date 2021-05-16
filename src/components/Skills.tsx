@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 type SkillLevel = "fine" | "good" | "learning";
 
-const toColor = (l: SkillLevel) => {
+const skillLevelToColor = (l: SkillLevel) => {
     switch (l) {
         case "fine":
             return "text-green-400";
@@ -21,12 +21,10 @@ const ColoredCircle: FC<{ color?: string }> = ({ color }) => (
 
 const SkillEntry: FC<{ level: SkillLevel }> = ({ children, level }) => {
     return (
-        <>
-            <li className="inline-flex flex-row rounded-full items-center border-white border-2 border-opacity-40 border-dotted px-4 py-0.5 mr-2 mt-2">
-                <ColoredCircle color={toColor(level)} />
-                {children}
-            </li>
-        </>
+        <li className="inline-flex flex-row items-center border-white border-2 border-opacity-40 border-dotted rounded-full px-4 py-0.5 mr-2 mt-2">
+            <ColoredCircle color={skillLevelToColor(level)} />
+            {children}
+        </li>
     );
 };
 
@@ -54,61 +52,35 @@ export const Skills: FC = () => {
                 <li className={`${dottedBorder} px-4 py-2 mt-4`}>
                     Webバックエンド
                     <ul>
-                        <li className="py-2">
+                        <li className={`${dottedBorder} px-4 py-2 mt-4`}>
                             Rust
-                            <ul className="ml-4">
-                                <li>
-                                    <ColoredCircle color={toColor("fine")} />
-                                    Tokio
-                                </li>
-                                <li>
-                                    <ColoredCircle color={toColor("fine")} />
-                                    Warp
-                                </li>
-                                <li>
-                                    <ColoredCircle color={toColor("fine")} />
+                            <ul>
+                                <SkillEntry level="fine">Tokio</SkillEntry>
+                                <SkillEntry level="fine">Warp</SkillEntry>
+                                <SkillEntry level="fine">
                                     MongoDB Official Driver
-                                </li>
+                                </SkillEntry>
                             </ul>
                         </li>
 
-                        <li className="py-2">
+                        <li className={`${dottedBorder} px-4 py-2 mt-4 mb-2`}>
                             TypeScript(Node.JS)
-                            <ul className="ml-4">
-                                <li>
-                                    <ColoredCircle color={toColor("fine")} />
-                                    Express
-                                </li>
-                                <li>
-                                    <ColoredCircle color={toColor("fine")} />
-                                    Fastify
-                                </li>
-                                <li>
-                                    <ColoredCircle color={toColor("fine")} />
-                                    Prisma
-                                </li>
-                                <li>
-                                    <ColoredCircle color={toColor("good")} />
+                            <ul>
+                                <SkillEntry level="fine">Express</SkillEntry>
+                                <SkillEntry level="good">Fastify</SkillEntry>
+                                <SkillEntry level="fine">Prisma</SkillEntry>
+                                <SkillEntry level="good">
                                     Nexus(GraphQL)
-                                </li>
+                                </SkillEntry>
                             </ul>
                         </li>
-                        <li>
-                            <ColoredCircle color={toColor("fine")} />
-                            Go
-                        </li>
-                        <li>
-                            <ColoredCircle color={toColor("fine")} />
+
+                        <SkillEntry level="fine">Go</SkillEntry>
+                        <SkillEntry level="fine">
                             Google Cloud Platform
-                        </li>
-                        <li>
-                            <ColoredCircle color={toColor("fine")} />
-                            MongoDB
-                        </li>
-                        <li>
-                            <ColoredCircle color={toColor("good")} />
-                            Postgres
-                        </li>
+                        </SkillEntry>
+                        <SkillEntry level="good">MongoDB</SkillEntry>
+                        <SkillEntry level="fine">Postgres</SkillEntry>
                     </ul>
                 </li>
 
