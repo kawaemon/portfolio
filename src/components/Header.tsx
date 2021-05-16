@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 export const Header: FC = () => (
-    <header className="w-screen h-screen space-y-6 flex flex-col items-center justify-center bg-gray-900 text-white">
+    <header className="w-full h-screen space-y-6 flex flex-col items-center justify-center bg-gray-900 text-white">
         <svg className="w-72 h-72" viewBox="0 0 101 101">
             <polygon
                 points="50,0 100,50 50,100 0,50"
