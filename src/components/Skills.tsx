@@ -42,9 +42,13 @@ export const Skills: FC = () => {
                     <ul>
                         <SkillEntry level="fine">HTML5</SkillEntry>
                         <SkillEntry level="good">CSS3</SkillEntry>
-                        <SkillEntry level="fine">GraphQL</SkillEntry>
+                        <SkillEntry level="good">Sass</SkillEntry>
+                        <SkillEntry level="good">tailwindcss</SkillEntry>
+                        <SkillEntry level="fine">TypeScript</SkillEntry>
+                        <SkillEntry level="fine">React</SkillEntry>
+                        <SkillEntry level="fine">Next.js</SkillEntry>
                         <SkillEntry level="fine">gRPC-web</SkillEntry>
-                        <SkillEntry level="fine">TypeScript(React)</SkillEntry>
+                        <SkillEntry level="fine">GraphQL</SkillEntry>
                         <SkillEntry level="fine">Rust(WASM Yew)</SkillEntry>
                     </ul>
                 </li>
