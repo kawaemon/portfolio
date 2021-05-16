@@ -7,7 +7,7 @@ const skillLevelToColor = (l: SkillLevel) => {
         case "fine":
             return "text-green-400";
         case "good":
-            return "text-blue-400";
+            return "text-indigo-400";
         case "learning":
             return "text-yellow-400";
     }
@@ -31,83 +31,119 @@ const SkillEntry: FC<{ level: SkillLevel }> = ({ children, level }) => {
 const dottedBorder =
     "border-white border-2 border-opacity-40 border-dotted rounded-xl";
 
+const BorderedList: FC = ({ children }) => (
+    <li className={`${dottedBorder} px-4 py-2 mt-2`}>{children}</li>
+);
+
+// prettier-ignore
+type ArrayType<T extends ReadonlyArray<unknown>> =
+    T extends ReadonlyArray<infer U> ? U : never;
+
+type SkillsList = ReadonlyArray<{
+    sectionName: string;
+    list: ReadonlyArray<SkillsListInner>;
+}>;
+
+type SkillsListInner =
+    | { level: SkillLevel; text: string }
+    | ArrayType<SkillsList>;
+
+const isInnerSkillsList = (
+    inner: SkillsListInner
+): inner is ArrayType<SkillsList> =>
+    (inner as Record<string, unknown>)["level"] == null;
+
+const skillsList: SkillsList = [
+    {
+        sectionName: "Webフロントエンド",
+        list: [
+            { level: "fine", text: "HTML5" },
+            { level: "good", text: "Sass" },
+            { level: "fine", text: "TypeScript" },
+            { level: "fine", text: "React" },
+            { level: "fine", text: "Next.js" },
+            { level: "fine", text: "gRPC-web" },
+            { level: "fine", text: "GraphQL" },
+            { level: "fine", text: "Rust (WASM Yew)" },
+        ],
+    },
+    {
+        sectionName: "Webバックエンド",
+        list: [
+            {
+                sectionName: "Rust",
+                list: [
+                    { level: "fine", text: "Tokio" },
+                    { level: "fine", text: "Warp" },
+                    { level: "fine", text: "MongoDB Official Driver" },
+                ],
+            },
+            {
+                sectionName: "TypeScript(Node.js)",
+                list: [
+                    { level: "fine", text: "Express" },
+                    { level: "good", text: "Fastify" },
+                    { level: "fine", text: "Prisma" },
+                ],
+            },
+            { level: "fine", text: "Go" },
+            { level: "fine", text: "Google Cloud Platform" },
+            { level: "fine", text: "MongoDB" },
+            { level: "good", text: "Postgres" },
+        ],
+    },
+    {
+        sectionName: "組み込み",
+        list: [
+            { level: "fine", text: "C (AVR)" },
+            { level: "fine", text: "Arduino" },
+            { level: "good", text: "Python3 (Raspberry Pi GPIO)" },
+        ],
+    },
+    {
+        sectionName: "その他",
+        list: [
+            { level: "fine", text: "Git" },
+            { level: "fine", text: "GitHub" },
+            { level: "fine", text: "Docker" },
+            { level: "fine", text: "Vagrant" },
+        ],
+    },
+];
+
+const SkillListImpl: FC<{ entry: ArrayType<SkillsList> }> = ({ entry }) => (
+    <ul>
+        {entry.list.map((x) => {
+            if (!isInnerSkillsList(x)) {
+                return (
+                    <SkillEntry key={x.text} level={x.level}>
+                        {x.text}
+                    </SkillEntry>
+                );
+            }
+
+            return (
+                <BorderedList key={x.sectionName}>
+                    <li>{x.sectionName}</li>
+                    <SkillListImpl entry={x} />
+                </BorderedList>
+            );
+        })}
+    </ul>
+);
+
 export const Skills: FC = () => {
     return (
         <section className="max-w-screen-md mx-auto mt-8">
             <h2>できること</h2>
 
             <ul>
-                <li className={`${dottedBorder} px-4 py-2 mt-4`}>
-                    Webフロントエンド
-                    <ul>
-                        <SkillEntry level="fine">HTML5</SkillEntry>
-                        <SkillEntry level="good">CSS3</SkillEntry>
-                        <SkillEntry level="good">Sass</SkillEntry>
-                        <SkillEntry level="good">tailwindcss</SkillEntry>
-                        <SkillEntry level="fine">TypeScript</SkillEntry>
-                        <SkillEntry level="fine">React</SkillEntry>
-                        <SkillEntry level="fine">Next.js</SkillEntry>
-                        <SkillEntry level="fine">gRPC-web</SkillEntry>
-                        <SkillEntry level="fine">GraphQL</SkillEntry>
-                        <SkillEntry level="fine">Rust(WASM Yew)</SkillEntry>
-                    </ul>
-                </li>
-
-                <li className={`${dottedBorder} px-4 py-2 mt-4`}>
-                    Webバックエンド
-                    <ul>
-                        <li className={`${dottedBorder} px-4 py-2 mt-4`}>
-                            Rust
-                            <ul>
-                                <SkillEntry level="fine">Tokio</SkillEntry>
-                                <SkillEntry level="fine">Warp</SkillEntry>
-                                <SkillEntry level="fine">
-                                    MongoDB Official Driver
-                                </SkillEntry>
-                            </ul>
-                        </li>
-
-                        <li className={`${dottedBorder} px-4 py-2 mt-4 mb-2`}>
-                            TypeScript(Node.JS)
-                            <ul>
-                                <SkillEntry level="fine">Express</SkillEntry>
-                                <SkillEntry level="good">Fastify</SkillEntry>
-                                <SkillEntry level="fine">Prisma</SkillEntry>
-                                <SkillEntry level="good">
-                                    Nexus(GraphQL)
-                                </SkillEntry>
-                            </ul>
-                        </li>
-
-                        <SkillEntry level="fine">Go</SkillEntry>
-                        <SkillEntry level="fine">
-                            Google Cloud Platform
-                        </SkillEntry>
-                        <SkillEntry level="good">MongoDB</SkillEntry>
-                        <SkillEntry level="fine">Postgres</SkillEntry>
-                    </ul>
-                </li>
-
-                <li className={`${dottedBorder} px-4 py-2 mt-4`}>
-                    組み込み
-                    <ul>
-                        <SkillEntry level="fine">C(AVR)</SkillEntry>
-                        <SkillEntry level="fine">Arduino</SkillEntry>
-                        <SkillEntry level="good">
-                            Python(Raspberry Pi GPIO)
-                        </SkillEntry>
-                    </ul>
-                </li>
-
-                <li className={`${dottedBorder} px-4 py-2 mt-4`}>
-                    その他
-                    <ul>
-                        <SkillEntry level="fine">Git</SkillEntry>
-                        <SkillEntry level="fine">GitHub</SkillEntry>
-                        <SkillEntry level="fine">Docker</SkillEntry>
-                        <SkillEntry level="fine">Vagrant</SkillEntry>
-                    </ul>
-                </li>
+                {skillsList.map((x) => (
+                    <BorderedList key={x.sectionName}>
+                        <li>{x.sectionName}</li>
+                        <SkillListImpl entry={x} />
+                    </BorderedList>
+                ))}
             </ul>
         </section>
     );
