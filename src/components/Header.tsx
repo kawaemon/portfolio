@@ -14,6 +14,6 @@ export const Header: FC = () => (
         </svg>
 
         <h1 className="text-6xl font-bold">かわえもん</h1>
-        <p className="text-xl">高専生 + Webデベロッパ</p>
+        <p className="text-xl">高専生 & Webデベロッパ</p>
     </header>
 );
