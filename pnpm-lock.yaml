@@ -1,10 +1,11 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@tailwindcss/typography': ^0.4.0
   '@types/react': ^17.0.5
   '@types/react-dom': ^17.0.5
   autoprefixer: ^10.2.5
-  next: ~10.2.0
+  next: ^10.2.0
   postcss: ^8.2.15
   prettier: ^2.3.0
   react: ^17.0.2
@@ -15,6 +16,7 @@ specifiers:
   typescript: ~4.2.4
 
 devDependencies:
+  '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.2
   '@types/react': 17.0.5
   '@types/react-dom': 17.0.5
   autoprefixer: 10.2.5_postcss@8.2.15
@@ -157,6 +159,18 @@ packages:
   /@opentelemetry/context-base/0.14.0:
     resolution: {integrity: sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==}
     engines: {node: '>=8.0.0'}
+    dev: true
+
+  /@tailwindcss/typography/0.4.0_tailwindcss@2.1.2:
+    resolution: {integrity: sha512-3BfOYT5MYNEq81Ism3L2qu/HRP2Q5vWqZtZRQqQrthHuaTK9qpuPfbMT5WATjAM5J1OePKBaI5pLoX4S1JGNMQ==}
+    peerDependencies:
+      tailwindcss: 2.0.0-alpha.24 || ^2.0.0
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      lodash.uniq: 4.5.0
+      tailwindcss: 2.1.2_797cfc3ceddb49f111b184f6879a433f
     dev: true
 
   /@types/node/15.3.0:
@@ -1271,6 +1285,18 @@ packages:
       p-locate: 4.1.0
     dev: true
 
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=}
+    dev: true
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=}
+    dev: true
+
+  /lodash.merge/4.6.2:
+    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
+
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=}
     dev: true
@@ -1281,6 +1307,10 @@ packages:
 
   /lodash.topath/4.5.2:
     resolution: {integrity: sha1-NhY1Hzu6YZlKCTGYlmC9AyVP0Ak=}
+    dev: true
+
+  /lodash.uniq/4.5.0:
+    resolution: {integrity: sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=}
     dev: true
 
   /lodash/4.17.21:

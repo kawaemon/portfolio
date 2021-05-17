@@ -2,10 +2,10 @@ import React, { FC } from "react";
 
 export const Profile: FC = () => {
     return (
-        <section className="max-w-screen-md mx-auto">
+        <section className="max-w-screen-md mx-auto prose">
             <h2 className="text-3xl">私について</h2>
 
-            <table className="w-2/3 mt-4">
+            <table className="mt-4">
                 <tbody>
                     <tr>
                         <td>名前</td>
@@ -27,7 +27,7 @@ export const Profile: FC = () => {
             </table>
 
             <h3 className="text-xl mt-2">検定など</h3>
-            <table className="w-1/4 mt-1">
+            <table className="mt-1">
                 <tbody>
                     <tr>
                         <td>TOEIC L&R</td>
@@ -41,7 +41,8 @@ export const Profile: FC = () => {
             </table>
 
             <p className="mt-2">
-                四国生まれ四国育ちの高専生です。小学生の頃から技術関係のことが好きで、電子工作やプログラミングをやってきました。高専に入学してからWeb系のプログラミングをはじめました。現在ではReactをメインで書いていますが、バックエンドのほうが得意です。電子工作をやっていたので低レイヤにも興味があります。
+                四国生まれ四国育ちの高専生です。小学生の頃から技術関係のことが好きで、電子工作やプログラミングをやってきました。高専に入学してからWeb系のプログラミングをはじめました。
+                現在では主にReactでフロントエンド、TypeScriptとRustでバックエンドを書いています。電子工作をやっていたので低レイヤにも興味があります。
             </p>
         </section>
     );
