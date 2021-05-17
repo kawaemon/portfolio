@@ -124,7 +124,7 @@ const SkillListImpl: FC<{ entry: ArrayType<SkillsList> }> = ({ entry }) => (
 
             return (
                 <BorderedList key={x.sectionName}>
-                    <li>{x.sectionName}</li>
+                    {x.sectionName}
                     <SkillListImpl entry={x} />
                 </BorderedList>
             );
@@ -140,7 +140,7 @@ export const Skills: FC = () => {
             <ul>
                 {skillsList.map((x) => (
                     <BorderedList key={x.sectionName}>
-                        <li>{x.sectionName}</li>
+                        {x.sectionName}
                         <SkillListImpl entry={x} />
                     </BorderedList>
                 ))}
