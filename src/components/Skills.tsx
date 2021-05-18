@@ -32,7 +32,7 @@ const dottedBorder =
     "border-white border-2 border-opacity-40 border-dotted rounded-xl";
 
 const BorderedList: FC = ({ children }) => (
-    <li className={`${dottedBorder} px-4 py-2 mt-2`}>{children}</li>
+    <li className={`${dottedBorder} px-4 py-2 mt-3`}>{children}</li>
 );
 
 // prettier-ignore
