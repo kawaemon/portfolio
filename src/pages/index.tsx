@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { Header } from "../components/Header";
 import { Profile } from "../components/Profile";
 import { Skills } from "../components/Skills";
+import { History } from "../components/History";
 
 const Index: FC = () => (
     <>
@@ -12,6 +13,7 @@ const Index: FC = () => (
             <article>
                 <Profile />
                 <Skills />
+                <History />
             </article>
         </main>
     </>
