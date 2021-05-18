@@ -89,7 +89,7 @@ const skillsList: SkillsList = [
             { level: "fine", text: "Go" },
             { level: "fine", text: "Google Cloud Platform" },
             { level: "fine", text: "MongoDB" },
-            { level: "good", text: "Postgres" },
+            { level: "good", text: "PostgreSQL" },
         ],
     },
     {
