@@ -1,15 +1,13 @@
 import React, { FC } from "react";
 
-type SkillLevel = "fine" | "good" | "learning";
+type SkillLevel = "fine" | "good";
 
 const skillLevelToColor = (l: SkillLevel) => {
     switch (l) {
         case "fine":
             return "text-green-400";
         case "good":
-            return "text-indigo-400";
-        case "learning":
-            return "text-yellow-400";
+            return "text-white opacity-40";
     }
 };
 
