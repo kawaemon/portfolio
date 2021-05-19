@@ -37,7 +37,7 @@ export const Header: FC = () => (
             <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://keybase.io.kawaemon"
+                href="https://keybase.io/kawaemon"
             >
                 <Key size={30} />
             </a>
