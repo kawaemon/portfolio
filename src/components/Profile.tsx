@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-const TableData: FC<{key_: string, value: string}> = ({key_, value}) => (
+const TableData: FC<{ key_: string; value: string }> = ({ key_, value }) => (
     <tr>
         <td className="w-1/3">{key_}</td>
         <td className="w-2/3">{value}</td>
@@ -16,7 +16,10 @@ export const Profile: FC = () => {
                 <tbody>
                     <TableData key_="名前" value="かわえもん" />
                     <TableData key_="所属" value="四国のどこかの高専" />
-                    <TableData key_="趣味" value="何かを作ること / リズムゲーム" />
+                    <TableData
+                        key_="趣味"
+                        value="何かを作ること / リズムゲーム"
+                    />
                     <TableData key_="誕生日" value="2003/07/08" />
                 </tbody>
             </table>
