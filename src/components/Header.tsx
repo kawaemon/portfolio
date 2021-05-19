@@ -15,7 +15,9 @@ export const Header: FC = () => (
         </svg>
 
         <h1 className="text-4xl font-bold md:text-6xl">かわえもん</h1>
-        <p className="text-xl" style={{ marginTop: "1rem" }} >高専生 & Webデベロッパ</p>
+        <p className="text-xl" style={{ marginTop: "1rem" }}>
+            高専生 & Webデベロッパ
+        </p>
 
         <div className="flex flex-row gap-x-4">
             <a
