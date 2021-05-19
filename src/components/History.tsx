@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 export const History: FC = () => (
-    <section className="max-w-screen-md mx-auto mt-8 prose">
+    <section className="mt-8 prose">
         <h3>略歴</h3>
         <ul>
             <li>2019年4月 四国の高専に入学</li>

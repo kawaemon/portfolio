@@ -7,10 +7,10 @@ import { History } from "../components/History";
 import { Footer } from "../components/Footer";
 
 const Index: FC = () => (
-    <article className="bg-gray-900 text-white w-full">
+    <article className="bg-gray-900 text-white">
         <Header />
 
-        <main>
+        <main className="w-full px-4 md:max-w-screen-md md:mx-auto">
             <Profile />
             <Skills />
             <History />
