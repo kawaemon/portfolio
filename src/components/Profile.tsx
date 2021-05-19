@@ -1,5 +1,12 @@
 import React, { FC } from "react";
 
+const TableData: FC<{key_: string, value: string}> = ({key_, value}) => (
+    <tr>
+        <td className="w-1/3">{key_}</td>
+        <td className="w-2/3">{value}</td>
+    </tr>
+);
+
 export const Profile: FC = () => {
     return (
         <section className="max-w-screen-md mx-auto prose">
@@ -7,36 +14,18 @@ export const Profile: FC = () => {
 
             <table className="mt-4">
                 <tbody>
-                    <tr>
-                        <td>名前</td>
-                        <td>かわえもん</td>
-                    </tr>
-                    <tr>
-                        <td>所属</td>
-                        <td>四国のどこかの高専</td>
-                    </tr>
-                    <tr>
-                        <td>趣味</td>
-                        <td>何かを作ること / リズムゲーム</td>
-                    </tr>
-                    <tr>
-                        <td>誕生日</td>
-                        <td>2003/07/08</td>
-                    </tr>
+                    <TableData key_="名前" value="かわえもん" />
+                    <TableData key_="所属" value="四国のどこかの高専" />
+                    <TableData key_="趣味" value="何かを作ること / リズムゲーム" />
+                    <TableData key_="誕生日" value="2003/07/08" />
                 </tbody>
             </table>
 
             <h3 className="text-xl mt-2">検定など</h3>
             <table className="mt-1">
                 <tbody>
-                    <tr>
-                        <td>TOEIC L&R</td>
-                        <td>780点</td>
-                    </tr>
-                    <tr>
-                        <td>P検</td>
-                        <td>準2級</td>
-                    </tr>
+                    <TableData key_="TOEIC L&R" value="780点" />
+                    <TableData key_="P検" value="準2級" />
                 </tbody>
             </table>
 
