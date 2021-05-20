@@ -21,7 +21,7 @@
     },
     "scripts": {
         "dev": "next dev",
-        "build": "rimraf out && next build && next export",
+        "build": "next build",
         "fmt": "prettier -w ./src",
         "postinstall": "husky install",
         "precommit": "prettier --check ./src"
