@@ -19,6 +19,8 @@ const App = ({ Component, pageProps }: AppProps) => (
                 href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
             />
 
+            <link rel="icon" href="/favicon.png" />
+
             <meta name="name" content="kawaemon's portfolio" />
             <meta name="description" content="kawaemon describes himself" />
 
