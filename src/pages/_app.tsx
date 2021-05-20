@@ -21,15 +21,16 @@ const App = ({ Component, pageProps }: AppProps) => (
 
             <link rel="icon" href="/favicon.png" />
 
-            <meta name="name" content="kawaemon's portfolio" />
-            <meta name="description" content="kawaemon describes himself" />
-
-            <meta property="og:title" content="kawaemon's portfolio" />
-            <meta
-                property="og:description"
-                content="kawaemon describes himself"
-            />
+            <meta name="name" content="かわえもんのポートフォリオ" />
+            <meta name="twitter:card" content="summary" />
+            <meta property="og:title" content="かわえもんのポートフォリオ" />
             <meta property="og:locale" content="ja_JP" />
+            <meta
+                property="og:image"
+                content="https://kawaemon.dev/ogp-image.webp"
+            />
+            <meta property="og:image:alt" content="icon" />
+            <meta property="og:type" content="icon" />
         </Head>
 
         <Component {...pageProps} />
