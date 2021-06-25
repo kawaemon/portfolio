@@ -13,12 +13,6 @@ const App = ({ Component, pageProps }: AppProps) => (
 
             <title>かわえもんのポートフォリオ</title>
 
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
-            />
-
             <link rel="icon" href="/favicon.png" />
 
             <meta name="name" content="かわえもんのポートフォリオ" />
