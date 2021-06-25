@@ -132,7 +132,7 @@ const SkillListImpl: FC<{ entry: ArrayType<SkillsList> }> = ({ entry }) => (
 
 export const Skills: FC = () => {
     return (
-        <section className="mt-8">
+        <section className="mt-8 max-w-full">
             <span className="prose">
                 <h3>できること</h3>
             </span>

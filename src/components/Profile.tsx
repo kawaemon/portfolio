@@ -9,7 +9,7 @@ const TableData: FC<{ key_: string; value: string }> = ({ key_, value }) => (
 
 export const Profile: FC = () => {
     return (
-        <section className="prose">
+        <section className="prose max-w-full">
             <h2 className="text-3xl">私について</h2>
 
             <table className="mt-4">
