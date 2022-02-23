@@ -27,14 +27,15 @@ export const Profile: FC = () => {
             <h3 className="text-xl mt-2">検定など</h3>
             <table className="mt-1">
                 <tbody>
-                    <TableData key_="TOEIC L&R" value="780点" />
+                    <TableData key_="TOEIC L&R" value="805点" />
                     <TableData key_="P検" value="準2級" />
                 </tbody>
             </table>
 
             <p className="mt-2">
                 四国生まれ四国育ちの高専生です。小学生の頃から技術関係のことが好きで、電子工作やプログラミングをやってきました。高専に入学してからWeb系のプログラミングをはじめました。
-                現在では主にReactでフロントエンド、TypeScriptとRustでバックエンドを書いています。電子工作をやっていたので低レイヤにも興味があります。
+                現在では主にReactでフロントエンド、TypeScript,
+                GoやRustでバックエンドを書いています。電子工作をやっていたので低レイヤにも興味があります。
             </p>
         </section>
     );
