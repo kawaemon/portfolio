@@ -17,7 +17,8 @@ const ColoredCircle: FC<{ color?: string }> = ({ color }) => (
     </svg>
 );
 
-const SkillEntry: FC<{ level: SkillLevel }> = ({ children, level }) => {
+const SkillEntry: FC<{ level: SkillLevel; children: ReactNode }> = (p) => {
+    const { children, level } = p;
     return (
         <li className="inline-flex flex-row items-center border-white border-2 border-opacity-40 border-dotted rounded-full px-4 py-0.5 mr-2 mt-2">
             <ColoredCircle color={skillLevelToColor(level)} />
@@ -29,7 +30,7 @@ const SkillEntry: FC<{ level: SkillLevel }> = ({ children, level }) => {
 const dottedBorder =
     "border-white border-2 border-opacity-40 border-dotted rounded-xl";
 
-const BorderedList: FC = ({ children }) => (
+const BorderedList: FC<{ children: ReactNode }> = ({ children }) => (
     <li className={`${dottedBorder} px-4 py-2 mt-3`}>{children}</li>
 );
 
