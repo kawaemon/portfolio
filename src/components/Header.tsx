@@ -19,28 +19,34 @@ export const Header: FC = () => (
             高専生 & Webデベロッパ
         </p>
 
-        <div className="flex flex-row gap-x-4">
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/kawason0708"
-            >
-                <Twitter size={30} />
-            </a>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/kawaemon"
-            >
-                <GitHub size={30} />
-            </a>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://keybase.io/kawaemon"
-            >
-                <Key size={30} />
-            </a>
-        </div>
+        <ul className="flex flex-row gap-x-4">
+            <li>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://twitter.com/kawason0708"
+                >
+                    <Twitter size={30} />
+                </a>
+            </li>
+            <li>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/kawaemon"
+                >
+                    <GitHub size={30} />
+                </a>
+            </li>
+            <li>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://keybase.io/kawaemon"
+                >
+                    <Key size={30} />
+                </a>
+            </li>
+        </ul>
     </header>
 );

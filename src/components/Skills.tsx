@@ -1,13 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 
-type SkillLevel = "fine" | "good";
+type SkillLevel = "fine";
 
 const skillLevelToColor = (l: SkillLevel) => {
     switch (l) {
         case "fine":
             return "text-green-400";
-        case "good":
-            return "text-white opacity-40";
     }
 };
 
@@ -57,7 +55,7 @@ const skillsList: SkillsList = [
         sectionName: "Webフロントエンド",
         list: [
             { level: "fine", text: "HTML5" },
-            { level: "good", text: "Sass" },
+            { level: "fine", text: "Sass" },
             { level: "fine", text: "TypeScript" },
             { level: "fine", text: "React" },
             { level: "fine", text: "Next.js" },
@@ -74,29 +72,29 @@ const skillsList: SkillsList = [
                 list: [
                     { level: "fine", text: "Tokio" },
                     { level: "fine", text: "Warp" },
-                    { level: "fine", text: "MongoDB Official Driver" },
+                    { level: "fine", text: "SeaORM" },
                 ],
             },
             {
                 sectionName: "TypeScript(Node.js)",
                 list: [
-                    { level: "fine", text: "Express" },
-                    { level: "good", text: "Fastify" },
+                    { level: "fine", text: "Fastify" },
                     { level: "fine", text: "Prisma" },
                 ],
             },
             { level: "fine", text: "Go" },
             { level: "fine", text: "Google Cloud Platform" },
             { level: "fine", text: "MongoDB" },
-            { level: "good", text: "PostgreSQL" },
+            { level: "fine", text: "RDBMS" },
         ],
     },
     {
         sectionName: "組み込み",
         list: [
-            { level: "fine", text: "C (AVR)" },
+            { level: "fine", text: "C (AVR, PIC)" },
+            { level: "fine", text: "ASM (PIC)" },
             { level: "fine", text: "Arduino" },
-            { level: "good", text: "Python3 (Raspberry Pi GPIO)" },
+            { level: "fine", text: "Python3 (Raspberry Pi GPIO)" },
         ],
     },
     {
