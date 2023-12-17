@@ -23,6 +23,7 @@ export const Header: FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://twitter.com/kawason0708"
+                            aria-label="かわえもんの Twitter アカウントへのリンク"
                         >
                             <Twitter size={30} />
                         </a>
@@ -32,6 +33,7 @@ export const Header: FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://github.com/kawaemon"
+                            aria-label="かわえもんの GitHub アカウントへのリンク"
                         >
                             <GitHub size={30} />
                         </a>
@@ -41,6 +43,7 @@ export const Header: FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://keybase.io/kawaemon"
+                            aria-label="かわえもんの Keybase アカウントへのリンク"
                         >
                             <Key size={30} />
                         </a>

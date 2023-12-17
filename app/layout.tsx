@@ -24,6 +24,11 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
             <link rel="icon" href="/favicon.png" />
 
             <meta name="name" content="かわえもんのポートフォリオ" />
+            <meta
+                name="description"
+                content="高専生デベロッパかわえもんのポートフォリオページです。"
+            />
+
             <meta name="twitter:card" content="summary" />
             <meta property="og:title" content="かわえもんのポートフォリオ" />
             <meta property="og:locale" content="ja_JP" />
