@@ -1,0 +1,101 @@
+.animated {
+    --start-rotate-delay: 0.1s;
+    --start-fadein-delay: 0.3s;
+    --start-rest-fadein-delay: 1s;
+    --start-duration: 1.5s;
+
+    --float-one-cycle-duration: 2.5s;
+    --float-delta: 2px; /* 2 */
+}
+
+/* prettier-ignore */
+.animated {
+    /* フェードインと回転が同時に終わるように */
+    --start-rotate-duration:      calc(var(--start-duration) - var(--start-rotate-delay));
+    --start-fadein-duration:      calc(var(--start-duration) - var(--start-fadein-delay));
+    --start-rest-fadein-duration: calc(var(--start-duration) - var(--start-rest-fadein-delay));
+
+    /* 開始アニメーション終了と同時に浮上開始 */
+    --float-init-delay: var(--start-duration);
+    --float-init-duration: calc(var(--float-one-cycle-duration) / 2);
+
+    --float-infinite-delay: calc(var(--start-duration) + var(--float-init-duration));
+    --float-infinite-duration: var(--float-one-cycle-duration);
+}
+
+.logo {
+    opacity: 0;
+    transform-origin: 50% 50%;
+
+    /* prettier-ignore */
+    animation:
+        forwards           logo-in-rotate   ease-in-out var(--start-rotate-duration)   var(--start-rotate-delay),
+        forwards           logo-in-opacity  ease-in-out var(--start-fadein-duration)   var(--start-fadein-delay),
+        forwards           logo-float-init  ease-in-out var(--float-init-duration)     var(--float-init-delay),
+        alternate infinite logo-float       ease-in-out var(--float-infinite-duration) var(--float-infinite-delay)
+}
+
+.rotate-on-hover {
+    transform-origin: 50% 50%;
+    animation: forwards logo-rotate-on-hover ease-in-out 1s;
+}
+
+@keyframes logo-rotate-on-hover {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes logo-in-rotate {
+    from {
+        transform: rotate(-55deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes logo-in-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes logo-float-init {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(var(--float-delta));
+    }
+}
+
+@keyframes logo-float {
+    from {
+        transform: translateY(var(--float-delta));
+    }
+    to {
+        transform: translateY(calc(var(--float-delta) * -1));
+    }
+}
+
+.rest {
+    opacity: 0;
+    animation: forwards rest-in ease-in-out var(--start-rest-fadein-duration)
+        var(--start-rest-fadein-delay);
+}
+
+@keyframes rest-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
