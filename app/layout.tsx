@@ -1,9 +1,18 @@
 import { FC } from "react";
+import { Noto_Sans_JP } from "next/font/google";
 
 import "./index.css";
 
+const font = Noto_Sans_JP({
+    weight: "400",
+    display: "swap",
+    // 日本語フォントではサブセットを指定できないらしく、
+    // サブセットを指定しない限りプリロードは使えない
+    preload: false,
+});
+
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
-    <html lang="ja">
+    <html lang="ja" className={font.className}>
         <head>
             <meta
                 name="viewport"
@@ -24,12 +33,6 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
             />
             <meta property="og:image:alt" content="icon" />
             <meta property="og:type" content="icon" />
-
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
-            />
         </head>
         <body>{children}</body>
     </html>

@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-    font-family: "Noto Sans JP", serif;
     @apply bg-gray-900;
 }
