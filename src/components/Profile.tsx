@@ -14,13 +14,10 @@ export const Profile: FC = () => {
 
             <table className="mt-4">
                 <tbody>
-                    <TableData key_="名前" value="かわえもん" />
-                    <TableData key_="所属" value="四国のどこかの高専" />
-                    <TableData
-                        key_="趣味"
-                        value="何かを作ること / 改造すること"
-                    />
-                    <TableData key_="誕生日" value="2003/07/08" />
+                    <TableData key_="ニックネーム" value="かわえもん" />
+                    <TableData key_="所属" value="四国の高専" />
+                    <TableData key_="趣味" value="ツーリング" />
+                    <TableData key_="誕生日" value="2003-07-08" />
                 </tbody>
             </table>
 
@@ -32,11 +29,14 @@ export const Profile: FC = () => {
                 </tbody>
             </table>
 
+            {/* prettier-ignore */}
             <p className="mt-2">
-                四国生まれ四国育ちの高専生です。小学生の頃から技術関係のことが好きで、電子工作やプログラミングをやってきました。
-                高専に入学してからWeb系のプログラミングを始め、現在では業務委託契約下で、主に
-                React で Web ページを、TypeScript, Go, Rust で API
-                サーバを書いています。電子工作をしていたので、低レイヤ分野にも興味があります。
+                四国生まれ四国育ちの高専生です。
+                小学生の頃からコンピュータが好きで、電子工作やプログラミングを楽しんできました。
+                簡単な自作 OS、PIC エミュレータから、ゲームや Web アプリなど雑多に様々なものを作っています。
+                現在では業務委託契約下で、主に React で Web ページを、TypeScript, Go, Rust で API
+                サーバを書いています。
+                電子工作をしていたので、低レイヤ分野にも興味があります。
             </p>
         </section>
     );

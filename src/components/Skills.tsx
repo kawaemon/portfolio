@@ -46,26 +46,25 @@ type SkillsListInner =
     | ArrayType<SkillsList>;
 
 const isInnerSkillsList = (
-    inner: SkillsListInner
+    inner: SkillsListInner,
 ): inner is ArrayType<SkillsList> =>
     (inner as Record<string, unknown>)["level"] == null;
 
 const skillsList: SkillsList = [
     {
-        sectionName: "Webフロントエンド",
+        sectionName: "Web フロントエンド",
         list: [
             { level: "fine", text: "HTML5" },
-            { level: "fine", text: "Sass" },
+            { level: "fine", text: "CSS" },
             { level: "fine", text: "TypeScript" },
             { level: "fine", text: "React" },
             { level: "fine", text: "Next.js" },
-            { level: "fine", text: "gRPC-web" },
             { level: "fine", text: "GraphQL" },
             { level: "fine", text: "Rust (WASM Yew)" },
         ],
     },
     {
-        sectionName: "Webバックエンド",
+        sectionName: "Web バックエンド",
         list: [
             {
                 sectionName: "Rust",
@@ -80,12 +79,13 @@ const skillsList: SkillsList = [
                 list: [
                     { level: "fine", text: "Fastify" },
                     { level: "fine", text: "Prisma" },
+                    { level: "fine", text: "Nest.js" },
                 ],
             },
             { level: "fine", text: "Go" },
             { level: "fine", text: "Google Cloud Platform" },
             { level: "fine", text: "MongoDB" },
-            { level: "fine", text: "RDBMS" },
+            { level: "fine", text: "SQL" },
         ],
     },
     {
