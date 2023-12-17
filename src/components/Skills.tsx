@@ -1,11 +1,14 @@
 import React, { FC, ReactNode } from "react";
+import { Tooltip } from "react-tooltip";
 
-type SkillLevel = "fine";
+type SkillLevel = "fine" | "learning";
 
 const skillLevelToColor = (l: SkillLevel) => {
     switch (l) {
         case "fine":
             return "text-green-400";
+        case "learning":
+            return "text-orange-400";
     }
 };
 
@@ -19,7 +22,9 @@ const SkillEntry: FC<{ level: SkillLevel; children: ReactNode }> = (p) => {
     const { children, level } = p;
     return (
         <li className="inline-flex flex-row items-center border-white border-2 border-opacity-40 border-dotted rounded-full px-4 py-0.5 mr-2 mt-2">
-            <ColoredCircle color={skillLevelToColor(level)} />
+            <a className={`marker-${level}`} href="javascript: void(0)">
+                <ColoredCircle color={skillLevelToColor(level)} />
+            </a>
             {children}
         </li>
     );
@@ -57,6 +62,7 @@ const skillsList: SkillsList = [
             { level: "fine", text: "HTML5" },
             { level: "fine", text: "CSS" },
             { level: "fine", text: "TypeScript" },
+            { level: "learning", text: "Svelte" },
             { level: "fine", text: "React" },
             { level: "fine", text: "Next.js" },
             { level: "fine", text: "GraphQL" },
@@ -144,6 +150,9 @@ export const Skills: FC = () => {
                     </BorderedList>
                 ))}
             </ul>
+
+            <Tooltip anchorSelect=".marker-fine">一通り使える</Tooltip>
+            <Tooltip anchorSelect=".marker-learning">勉強中</Tooltip>
         </section>
     );
 };
