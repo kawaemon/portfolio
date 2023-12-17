@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from "react";
-import { Tooltip } from "react-tooltip";
+import { SkillsTooltip } from "./SkillsTooltip";
 
 type SkillLevel = "fine" | "learning";
 
@@ -76,7 +76,7 @@ const skillsList: SkillsList = [
                 sectionName: "Rust",
                 list: [
                     { level: "fine", text: "Tokio" },
-                    { level: "fine", text: "Warp" },
+                    { level: "fine", text: "Sarp" },
                     { level: "fine", text: "SeaORM" },
                 ],
             },
@@ -151,8 +151,7 @@ export const Skills: FC = () => {
                 ))}
             </ul>
 
-            <Tooltip anchorSelect=".marker-fine">一通り使える</Tooltip>
-            <Tooltip anchorSelect=".marker-learning">勉強中</Tooltip>
+            <SkillsTooltip />
         </section>
     );
 };

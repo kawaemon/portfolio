@@ -25,7 +25,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "fmt": "prettier -w ./src",
+        "fmt": "prettier -w ./app",
         "lint": "next lint",
         "postinstall": "husky install"
     },

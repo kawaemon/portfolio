@@ -1,11 +1,10 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
+import { FC } from "react";
 
 import "./index.css";
 
-const App = ({ Component, pageProps }: AppProps) => (
-    <>
-        <Head>
+const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
+    <html lang="ja">
+        <head>
             <meta
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
@@ -25,10 +24,15 @@ const App = ({ Component, pageProps }: AppProps) => (
             />
             <meta property="og:image:alt" content="icon" />
             <meta property="og:type" content="icon" />
-        </Head>
 
-        <Component {...pageProps} />
-    </>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap"
+            />
+        </head>
+        <body>{children}</body>
+    </html>
 );
 
-export default App;
+export default RootLayout;

@@ -1,41 +1,13 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Twitter, GitHub, Key } from "react-feather";
-import styles from "./Header.module.css";
 
-// set-if-true
-function sit(shouldSpecify: boolean, value: string): string {
-    if (shouldSpecify) {
-        return value;
-    }
-    return "";
-}
+import styles from "./Header.module.css";
+import { HeaderLogo } from "./HeaderLogo";
 
 export const Header: FC = () => {
-    const [isHoverAnimating, setHoverAnimating] = useState(false);
-
     return (
         <header className="w-full h-screen space-y-6 flex flex-col items-center justify-center bg-gray-900 text-white">
-            <svg className={`w-48 h-48 md:w-64 md:h-64`} viewBox="0 0 100 100">
-                <g className={`${styles.animated} ${styles.logo}`}>
-                    <polygon
-                        className={[
-                            styles.animated,
-                            sit(isHoverAnimating, styles["rotate-on-hover"]),
-                        ].join(" ")}
-                        onMouseEnter={() => {
-                            console.log("hover");
-                            setHoverAnimating(true);
-                        }}
-                        onAnimationEnd={() => {
-                            setHoverAnimating(false);
-                        }}
-                        points="50,5 95,50 50,95 5,50"
-                        stroke="white"
-                        strokeWidth="1"
-                        fill="none"
-                    />
-                </g>
-            </svg>
+            <HeaderLogo />
 
             <div
                 className={`space-y-6 flex flex-col items-center justify-center ${styles.animated} ${styles.rest}`}
