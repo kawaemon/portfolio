@@ -37,7 +37,7 @@
 
 .rotate-on-hover {
     transform-origin: 50% 50%;
-    animation: forwards logo-rotate-on-hover ease-in-out 1s;
+    animation: forwards logo-rotate-on-hover ease-in-out 3s;
 }
 
 @keyframes logo-rotate-on-hover {
@@ -45,7 +45,7 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(180deg);
+        transform: rotate(1080deg);
     }
 }
 
