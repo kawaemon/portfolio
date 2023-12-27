@@ -22,7 +22,7 @@ const SkillEntry: FC<{ level: SkillLevel; children: ReactNode }> = (p) => {
     const { children, level } = p;
     return (
         <li className="inline-flex flex-row items-center border-white border-2 border-opacity-40 border-dotted rounded-full px-4 py-0.5 mr-2 mt-2">
-            <span className={`marker-${level}`}>
+            <span className={`marker-${level} flex`}>
                 <ColoredCircle color={skillLevelToColor(level)} />
             </span>
             {children}
