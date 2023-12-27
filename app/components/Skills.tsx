@@ -76,7 +76,7 @@ const skillsList: SkillsList = [
                 sectionName: "Rust",
                 list: [
                     { level: "fine", text: "Tokio" },
-                    { level: "fine", text: "Sarp" },
+                    { level: "fine", text: "Warp" },
                     { level: "fine", text: "SeaORM" },
                 ],
             },
