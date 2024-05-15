@@ -63,6 +63,7 @@ const skillsList: SkillsList = [
             { level: "fine", text: "CSS" },
             { level: "fine", text: "TypeScript" },
             { level: "learning", text: "Svelte" },
+            { level: "learning", text: "Solid.js" },
             { level: "fine", text: "React" },
             { level: "fine", text: "Next.js" },
             { level: "fine", text: "GraphQL" },
@@ -77,21 +78,30 @@ const skillsList: SkillsList = [
                 list: [
                     { level: "fine", text: "Tokio" },
                     { level: "fine", text: "Warp" },
+                    { level: "fine", text: "Axum" },
                     { level: "fine", text: "SeaORM" },
+                    { level: "fine", text: "Sqlx" },
                 ],
             },
             {
                 sectionName: "TypeScript(Node.js)",
                 list: [
                     { level: "fine", text: "Fastify" },
-                    { level: "fine", text: "Prisma" },
                     { level: "fine", text: "Nest.js" },
+                    { level: "fine", text: "Prisma" },
+                    { level: "fine", text: "TypeORM" },
                 ],
             },
             { level: "fine", text: "Go" },
-            { level: "fine", text: "Google Cloud Platform" },
             { level: "fine", text: "MongoDB" },
             { level: "fine", text: "SQL" },
+        ],
+    },
+    {
+        sectionName: "インフラ",
+        list: [
+            { level: "fine", text: "Terraform (CDKTF)" },
+            { level: "fine", text: "AWS CDK" },
         ],
     },
     {

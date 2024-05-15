@@ -14,7 +14,7 @@ export const Header: FC = () => {
             >
                 <h1 className="text-4xl font-bold md:text-6xl">かわえもん</h1>
                 <p className="text-xl" style={{ marginTop: "1rem" }}>
-                    高専生 デベロッパ
+                    大学生 デベロッパ
                 </p>
 
                 <ul className="flex flex-row gap-x-4">

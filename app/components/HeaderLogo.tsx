@@ -14,15 +14,17 @@ function sit(shouldSpecify: boolean, value: string): string {
 type AnimationState = "init" | "animating" | "done";
 
 export const HeaderLogo: FC = () => {
-    const [s, ss] = useState<AnimationState>("init");
+    const [animationState, setAnimationState] =
+        useState<AnimationState>("init");
 
     useEffect(() => {
-        if (s === "done") {
-            ss("init");
+        if (animationState === "done") {
+            setAnimationState("init");
         }
-    }, [s]);
+    }, [animationState]);
 
-    const begin = () => ss((x) => (x === "init" ? "animating" : x));
+    const begin = () =>
+        setAnimationState((x) => (x === "init" ? "animating" : x));
 
     return (
         <svg
@@ -35,13 +37,16 @@ export const HeaderLogo: FC = () => {
                 <polygon
                     className={[
                         styles.animated,
-                        sit(s === "animating", styles["rotate-on-hover"]),
+                        sit(
+                            animationState === "animating",
+                            styles["rotate-on-hover"],
+                        ),
                     ].join(" ")}
                     points="50,5 95,50 50,95 5,50"
                     stroke="white"
                     strokeWidth="1"
                     fill="none"
-                    onAnimationEnd={() => ss("done")}
+                    onAnimationEnd={() => setAnimationState("done")}
                 />
             </g>
         </svg>

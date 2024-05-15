@@ -26,7 +26,7 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
             <meta name="name" content="かわえもんのポートフォリオ" />
             <meta
                 name="description"
-                content="高専生デベロッパかわえもんのポートフォリオページです。"
+                content="かわえもんのポートフォリオページです。"
             />
 
             <meta name="twitter:card" content="summary" />
