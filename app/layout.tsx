@@ -1,18 +1,9 @@
 import { FC } from "react";
-import { Noto_Sans_JP } from "next/font/google";
 
 import "./index.css";
 
-const font = Noto_Sans_JP({
-    weight: "400",
-    display: "swap",
-    // 日本語フォントではサブセットを指定できないらしく、
-    // サブセットを指定しない限りプリロードは使えない
-    preload: false,
-});
-
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
-    <html lang="ja" className={font.className}>
+    <html lang="ja" className="font-sans">
         <head>
             <meta
                 name="viewport"
