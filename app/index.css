@@ -1,7 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
 
 @config '../tailwind.config.js';
 
 body {
-    @apply bg-gray-900;
+    @apply bg-gray-900 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700;
 }
