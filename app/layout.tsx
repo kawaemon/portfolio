@@ -3,7 +3,7 @@ import { FC } from "react";
 import "./index.css";
 
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
-    <html lang="ja" className="font-sans">
+    <html lang="ja">
         <head>
             <meta
                 name="viewport"

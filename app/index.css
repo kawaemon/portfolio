@@ -3,6 +3,7 @@
 
 @config '../tailwind.config.js';
 
-body {
-    @apply bg-gray-900 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700;
+html {
+    @apply bg-gray-900 text-white font-sans;
+    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700;
 }
