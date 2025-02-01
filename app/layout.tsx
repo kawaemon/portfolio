@@ -1,6 +1,26 @@
 import { FC } from "react";
 
 import "./index.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "かわえもん",
+    icons: "/favicon.png",
+    applicationName: "かわえもん",
+    description: "かわえもんのポートフォリオ",
+    twitter: {
+        card: "summary",
+    },
+    openGraph: {
+        title: "かわえもん",
+        locale: "ja_JP",
+        type: "website",
+        images: {
+            url: "https://kawaemon.dev/ogp-image.webp",
+            alt: "icon",
+        },
+    },
+};
 
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
     <html lang="ja">
@@ -9,26 +29,6 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-
-            <title>かわえもんのポートフォリオ</title>
-
-            <link rel="icon" href="/favicon.png" />
-
-            <meta name="name" content="かわえもんのポートフォリオ" />
-            <meta
-                name="description"
-                content="かわえもんのポートフォリオページです。"
-            />
-
-            <meta name="twitter:card" content="summary" />
-            <meta property="og:title" content="かわえもんのポートフォリオ" />
-            <meta property="og:locale" content="ja_JP" />
-            <meta
-                property="og:image"
-                content="https://kawaemon.dev/ogp-image.webp"
-            />
-            <meta property="og:image:alt" content="icon" />
-            <meta property="og:type" content="icon" />
         </head>
         <body>{children}</body>
     </html>
