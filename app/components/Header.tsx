@@ -3,7 +3,7 @@ import { Twitter, GitHub, Key } from "react-feather";
 
 import styles from "./Header.module.css";
 import { HeaderLogo } from "./HeaderLogo";
-import { ExternalLink } from "./ExternalLink";
+import { ExternalLink } from "./base/ExternalLink";
 
 export const Header: FC = () => {
     return (

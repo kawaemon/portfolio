@@ -2,14 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 import styles from "./Header.module.css";
-
-// set-if-true
-function sit(shouldSpecify: boolean, value: string): string {
-    if (shouldSpecify) {
-        return value;
-    }
-    return "";
-}
+import { sit } from "./util";
 
 type AnimationState = "init" | "animating" | "done";
 
