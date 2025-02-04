@@ -1,52 +1,31 @@
 import React, { FC } from "react";
 import { List } from "./base/List";
-import { sit } from "./util";
 import { H3 } from "./base/H";
-
-const TableData: FC<{ children: Record<string, string> }> = ({ children }) => (
-    <tbody>
-        {Object.entries(children).map(([k, v], i) => (
-            <tr
-                className={[
-                    "pt-3",
-                    sit(i > 0, "border-t-1 border-gray-700"),
-                ].join(" ")}
-                key={k}
-            >
-                <td className="py-2 w-1/3">{k}</td>
-                <td className="py-2 w-2/3">{v}</td>
-            </tr>
-        ))}
-    </tbody>
-);
+import { Table } from "./base/Table";
 
 export const Profile: FC = () => {
     return (
         <section className="max-w-full space-y-4">
             <section>
-                <table className="w-full">
-                    <TableData>
-                        {{
-                            ニックネーム: "かわえもん",
-                            所属: "慶應義塾大学 総合政策学部",
-                            趣味: "ツーリング",
-                            生年月日: "2003-07-08",
-                        }}
-                    </TableData>
-                </table>
+                <Table>
+                    {{
+                        ニックネーム: "かわえもん",
+                        所属: "慶應義塾大学 総合政策学部",
+                        趣味: "ツーリング",
+                        生年月日: "2003-07-08",
+                    }}
+                </Table>
             </section>
 
             <section>
                 <H3 className="my-2">検定</H3>
-                <table className="w-full">
-                    <TableData>
-                        {{
-                            "TOEIC L&R": "835点",
-                            "TOEFL ITP": "530点",
-                            P検: "準2級",
-                        }}
-                    </TableData>
-                </table>
+                <Table>
+                    {{
+                        "TOEIC L&R": "835点",
+                        "TOEFL ITP": "530点",
+                        P検: "準2級",
+                    }}
+                </Table>
             </section>
 
             <section>
