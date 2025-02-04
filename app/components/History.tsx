@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { ExternalLink } from "./base/ExternalLink";
-import { List } from "./base/List";
 import { H3 } from "./base/H";
 import { Table } from "./base/Table";
 
