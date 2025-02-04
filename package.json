@@ -15,7 +15,6 @@
         "@types/react-dom": "^19.0.3",
         "eslint": "^9.19.0",
         "eslint-config-next": "^15.1.6",
-        "husky": "^9.1.7",
         "next": "^15.1.6",
         "postcss": "^8.5.1",
         "prettier": "^3.4.2",
@@ -26,8 +25,7 @@
         "dev": "next dev",
         "build": "next build",
         "fmt": "prettier -w ./app",
-        "lint": "next lint",
-        "postinstall": "husky install"
+        "lint": "next lint"
     },
     "prettier": {
         "tabWidth": 4
