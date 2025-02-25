@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { List } from "./base/List";
-import { H3 } from "./base/H";
 import { Table } from "./base/Table";
 
 export const Profile: FC = () => {
@@ -18,7 +17,7 @@ export const Profile: FC = () => {
             </section>
 
             <section>
-                <H3 className="my-2">検定</H3>
+                <h3>検定</h3>
                 <Table>
                     {{
                         "TOEIC L&R": "835点",
@@ -29,7 +28,7 @@ export const Profile: FC = () => {
             </section>
 
             <section>
-                <H3 className="my-2">資格</H3>
+                <h3 className="my-2">資格</h3>
                 <List>
                     <li>第一級陸上特殊無線技士</li>
                     <li>普通自動車第一種運転免許</li>

@@ -1,6 +1,5 @@
 import React, { FC, ReactNode } from "react";
 import { SkillsTooltip } from "./SkillsTooltip";
-import { H3 } from "./base/H";
 
 type SkillLevel = "fine" | "learning";
 
@@ -149,7 +148,7 @@ const SkillListImpl: FC<{ entry: ArrayType<SkillsList> }> = ({ entry }) => (
 export const Skills: FC = () => {
     return (
         <section className="mt-8 max-w-full">
-            <H3>できること</H3>
+            <h3>できること</h3>
 
             <ul>
                 {skillsList.map((x) => (

@@ -5,3 +5,7 @@ html {
     @apply bg-gray-900 font-sans text-gray-300;
     @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700;
 }
+
+h3 {
+    @apply text-xl mb-2 font-bold;
+}

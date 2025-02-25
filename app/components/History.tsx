@@ -1,11 +1,10 @@
 import React, { FC } from "react";
 import { ExternalLink } from "./base/ExternalLink";
-import { H3 } from "./base/H";
 import { Table } from "./base/Table";
 
 export const History: FC = () => (
     <section className="mt-8 max-w-full">
-        <H3>略歴</H3>
+        <h3>略歴</h3>
         <Table>
             {{
                 "2025年01月": (
