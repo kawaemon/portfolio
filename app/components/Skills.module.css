@@ -1,0 +1,6 @@
+/* FIXME: too ugly */
+@media (width >= 600px) {
+    .cardWidth {
+        width: calc(50% - 2 * var(--spacing))
+    }
+}
