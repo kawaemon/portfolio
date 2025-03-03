@@ -21,7 +21,7 @@ const Card: FC<Card.Props> = ({ children }) => {
 
 export const Skills: FC = () => {
     return (
-        <section className="mt-8 max-w-full">
+        <section className="max-w-full">
             <h3>できること</h3>
             {/* できることはスキルだけの紹介にとどめて、作品紹介は別の場所に分けてタグ付けする形がいい気がするな。このままだと技術と作品が many-to-1 だとこまる。 */}
             <div className="flex flex-wrap gap-2">

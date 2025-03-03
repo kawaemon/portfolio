@@ -3,7 +3,7 @@ import { ExternalLink } from "./base/ExternalLink";
 import { Table } from "./base/Table";
 
 export const History: FC = () => (
-    <section className="mt-8 max-w-full">
+    <section className="max-w-full">
         <h3>略歴</h3>
         <Table>
             {{

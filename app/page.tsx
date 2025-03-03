@@ -10,7 +10,7 @@ const Index: FC = () => (
     <article>
         <Header />
 
-        <main className="w-full px-4 md:max-w-screen-md md:mx-auto">
+        <main className="space-y-8 w-full px-4 md:max-w-screen-md md:mx-auto">
             <Profile />
             <Skills />
             <History />
