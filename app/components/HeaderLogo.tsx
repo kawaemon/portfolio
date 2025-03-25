@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { sit } from "./util";
 
 type AnimationState = "init" | "animating" | "done";
@@ -26,15 +26,12 @@ export const HeaderLogo: FC = () => {
             onMouseEnter={begin}
             onClick={begin}
         >
-            <g className={`${styles.animated} ${styles.logo}`}>
+            <g className={`${styles.logo}`}>
                 <polygon
-                    className={[
-                        styles.animated,
-                        sit(
-                            animationState === "animating",
-                            styles["rotate-on-hover"],
-                        ),
-                    ].join(" ")}
+                    className={sit(
+                        animationState === "animating",
+                        styles["rotate-on-hover"],
+                    )}
                     points="50,5 95,50 50,95 5,50"
                     stroke="white"
                     strokeWidth="1"

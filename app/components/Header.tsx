@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Twitter, GitHub, Key } from "react-feather";
 
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { HeaderLogo } from "./HeaderLogo";
 import { ExternalLink } from "./base/ExternalLink";
 
@@ -11,7 +11,7 @@ export const Header: FC = () => {
             <HeaderLogo />
 
             <div
-                className={`space-y-6 flex flex-col items-center justify-center ${styles.animated} ${styles.rest}`}
+                className={`space-y-6 flex flex-col items-center justify-center ${styles.rest}`}
             >
                 <h1 className="text-4xl font-bold md:text-6xl">かわえもん</h1>
                 <p className="text-xl" style={{ marginTop: "1rem" }}>

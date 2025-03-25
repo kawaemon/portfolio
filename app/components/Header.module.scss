@@ -1,0 +1,98 @@
+@use "sass:math";
+
+$start-rotate-delay: 0.1s;
+$start-fadein-delay: 0.3s;
+$start-rest-fadein-delay: 1s;
+$start-duration: 1.5s;
+$float-one-cycle-duration: 2.5s;
+$float-delta: 2px;
+
+
+/* フェードインと回転が同時に終わるように */
+$start-rotate-duration:      $start-duration - $start-rotate-delay;
+$start-fadein-duration:      $start-duration - $start-fadein-delay;
+$start-rest-fadein-duration: $start-duration - $start-rest-fadein-delay;
+
+/* 開始アニメーション終了と同時に浮上開始 */
+$float-init-delay: $start-duration;
+$float-init-duration: math.div($float-one-cycle-duration, 2);
+
+$float-infinite-delay: $start-duration + $float-init-duration;
+$float-infinite-duration: $float-one-cycle-duration;
+
+.logo {
+    opacity: 0;
+    transform-origin: 50% 50%;
+
+    /* prettier-ignore */
+    animation:
+        forwards           logo-in-rotate   ease-in-out $start-rotate-duration   $start-rotate-delay,
+        forwards           logo-in-opacity  ease-in-out $start-fadein-duration   $start-fadein-delay,
+        forwards           logo-float-init  ease-in-out $float-init-duration     $float-init-delay,
+        alternate infinite logo-float       ease-in-out $float-infinite-duration $float-infinite-delay,
+}
+
+.rotate-on-hover {
+    transform-origin: 50% 50%;
+    animation: forwards logo-rotate-on-hover ease-in-out 3s;
+}
+
+@keyframes logo-rotate-on-hover {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1080deg);
+    }
+}
+
+@keyframes logo-in-rotate {
+    from {
+        transform: rotate(-55deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes logo-in-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes logo-float-init {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY($float-delta);
+    }
+}
+
+@keyframes logo-float {
+    from {
+        transform: translateY($float-delta);
+    }
+    to {
+        transform: translateY($float-delta * -1);
+    }
+}
+
+.rest {
+    opacity: 0;
+    animation: forwards rest-in ease-in-out $start-rest-fadein-duration
+        $start-rest-fadein-delay;
+}
+
+@keyframes rest-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
