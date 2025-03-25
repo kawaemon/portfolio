@@ -7,6 +7,18 @@ export const History: FC = () => (
         <h3>略歴</h3>
         <Table>
             {{
+                "2025年03月": (
+                    <>
+                        WebSpeedHackathon 2025 でスコア 8 / 123 位{" "}
+                        <ExternalLink
+                            className="underline"
+                            href="https://web-speed-hackathon-scoring-board-2025.fly.dev/"
+                            label="WebSpeedHackathon 2025 のリーダーボード"
+                        >
+                            [順位表]
+                        </ExternalLink>
+                    </>
+                ),
                 "2025年01月": (
                     <>
                         ISUCON14 感想戦で 2 位{" "}
@@ -22,7 +34,7 @@ export const History: FC = () => (
                 ),
                 "2024年12月": (
                     <>
-                        ISUCON14 でチームスコア 8/834 位{" "}
+                        ISUCON14 でチームスコア 8 / 834 位{" "}
                         <ExternalLink
                             className="underline"
                             href="https://zenn.dev/kawaemon/articles/f40529e0c447f5"
