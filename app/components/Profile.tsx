@@ -30,6 +30,7 @@ export const Profile: FC = () => {
             <section>
                 <h3 className="my-2">資格</h3>
                 <List>
+                    <li>応用情報技術者試験 合格 (2025春)</li>
                     <li>第一級陸上特殊無線技士</li>
                     <li>普通自動車第一種運転免許</li>
                     <li>普通自動二輪車運転免許</li>
