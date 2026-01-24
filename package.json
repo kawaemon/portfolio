@@ -1,37 +1,37 @@
 {
-    "name": "portfolio",
-    "license": "MIT",
-    "dependencies": {
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "react-feather": "^2.0.10",
-        "tailwindcss": "^4.0.15"
-    },
-    "devDependencies": {
-        "@tailwindcss/postcss": "^4.0.15",
-        "@types/node": "^22.13.13",
-        "@types/react": "^19.0.12",
-        "@types/react-dom": "^19.0.4",
-        "eslint": "^9.23.0",
-        "eslint-config-next": "^15.2.4",
-        "next": "^15.2.4",
-        "postcss": "^8.5.3",
-        "prettier": "^3.5.3",
-        "sass": "^1.86.0",
-        "tailwind-scrollbar": "^4.0.1",
-        "typescript": "~5.8.2"
-    },
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "fmt": "prettier -w ./app",
-        "lint": "next lint"
-    },
-    "prettier": {
-        "tabWidth": 4
-    },
-    "broserslist": [
-        ">0.3%, >5% in jp, not dead"
-    ],
-    "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
+  "name": "portfolio",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-feather": "^2.0.10",
+    "tailwindcss": "^4.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.15",
+    "@types/node": "^22.13.13",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.23.0",
+    "eslint-config-next": "^15.2.4",
+    "next": "15.2.8",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.0",
+    "tailwind-scrollbar": "^4.0.1",
+    "typescript": "~5.8.2"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "fmt": "prettier -w ./app",
+    "lint": "next lint"
+  },
+  "prettier": {
+    "tabWidth": 4
+  },
+  "broserslist": [
+    ">0.3%, >5% in jp, not dead"
+  ],
+  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }
