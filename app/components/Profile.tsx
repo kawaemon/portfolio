@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { List } from "./base/List";
 import { Table } from "./base/Table";
+import { TouringGallery } from "./TouringGallery";
 
 export const Profile: FC = () => {
     return (
@@ -10,7 +11,7 @@ export const Profile: FC = () => {
                     {{
                         ニックネーム: "かわえもん",
                         所属: "慶應義塾大学 総合政策学部",
-                        趣味: "ツーリング",
+                        趣味: <TouringGallery />,
                         生年月日: "2003-07-08",
                     }}
                 </Table>

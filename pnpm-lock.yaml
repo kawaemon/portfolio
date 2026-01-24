@@ -20,6 +20,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
+      yet-another-react-lightbox:
+        specifier: ^3.28.0
+        version: 3.28.0(@types/react-dom@19.2.3(@types/react@19.2.9))(@types/react@19.2.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.1.18
@@ -2034,6 +2037,20 @@ packages:
 
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
+
+  yet-another-react-lightbox@3.28.0:
+    resolution: {integrity: sha512-bHjG1/DS4aWPkKb/6hNp0+zcgjda27wQlXBpJvb9TcblC1U1dY3Ih0pe85O8/ZLz+OIy+ZvLxN2gmsbDW0Q/QQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@types/react': ^16 || ^17 || ^18 || ^19
+      '@types/react-dom': ^16 || ^17 || ^18 || ^19
+      react: ^16.8.0 || ^17 || ^18 || ^19
+      react-dom: ^16.8.0 || ^17 || ^18 || ^19
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
 
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
@@ -4247,6 +4264,14 @@ snapshots:
   word-wrap@1.2.5: {}
 
   yallist@3.1.1: {}
+
+  yet-another-react-lightbox@3.28.0(@types/react-dom@19.2.3(@types/react@19.2.9))(@types/react@19.2.9)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+    dependencies:
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+    optionalDependencies:
+      '@types/react': 19.2.9
+      '@types/react-dom': 19.2.3(@types/react@19.2.9)
 
   yocto-queue@0.1.0: {}
 
