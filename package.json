@@ -2,24 +2,24 @@
     "name": "portfolio",
     "license": "MIT",
     "dependencies": {
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
+        "react": "^19.2.3",
+        "react-dom": "^19.2.3",
         "react-feather": "^2.0.10",
-        "tailwindcss": "^4.0.15"
+        "tailwindcss": "^4.1.18"
     },
     "devDependencies": {
-        "@tailwindcss/postcss": "^4.0.15",
-        "@types/node": "^22.13.13",
-        "@types/react": "^19.0.12",
-        "@types/react-dom": "^19.0.4",
-        "eslint": "^9.23.0",
-        "eslint-config-next": "^15.2.4",
-        "next": "^15.2.4",
-        "postcss": "^8.5.3",
-        "prettier": "^3.5.3",
-        "sass": "^1.86.0",
-        "tailwind-scrollbar": "^4.0.1",
-        "typescript": "~5.8.2"
+        "@tailwindcss/postcss": "^4.1.18",
+        "@types/node": "^25.0.10",
+        "@types/react": "^19.2.9",
+        "@types/react-dom": "^19.2.3",
+        "eslint": "^9.39.2",
+        "eslint-config-next": "^16.1.4",
+        "next": "^16.1.4",
+        "postcss": "^8.5.6",
+        "prettier": "^3.8.1",
+        "sass": "^1.97.3",
+        "tailwind-scrollbar": "^4.0.2",
+        "typescript": "~5.9.3"
     },
     "scripts": {
         "dev": "next dev",
