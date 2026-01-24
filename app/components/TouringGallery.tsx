@@ -45,7 +45,7 @@ export const TouringGallery: FC = () => {
 
 function isNextJsImage(
     slide: Slide,
-): slide is Slide & { width: number; height: number } {
+): slide is Slide & { width: number; height: number; blurDataURL?: string } {
     return (
         isImageSlide(slide) &&
         typeof slide.width === "number" &&
@@ -85,6 +85,8 @@ function NextJsImageSlideRenderer({ slide, offset, rect }: RenderSlideProps) {
                 src={slide.src}
                 loading="eager"
                 draggable={false}
+                placeholder={slide.blurDataURL ? "blur" : "empty"}
+                blurDataURL={slide.blurDataURL}
                 style={{
                     objectFit: cover ? "cover" : "contain",
                     cursor: click ? "pointer" : undefined,
