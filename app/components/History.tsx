@@ -7,11 +7,38 @@ export const History: FC = () => (
         <h3>略歴</h3>
         <Table>
             {{
+                "2026年03月": (
+                    <>
+                        ICT トラブルシューティングコンテスト 2025 にチーム出場
+                        <ExternalLink
+                            href="https://icttoracon.net/archives/10166"
+                            label="ICTSC 一次予選結果"
+                        >
+                            [一次予選-7位]
+                        </ExternalLink>{" "}
+                        <ExternalLink
+                            href="https://icttoracon.net/archives/10329"
+                            label="ICTSC 二次予選結果"
+                        >
+                            [二次予選-満点1位]
+                        </ExternalLink>
+                    </>
+                ),
+                "2025年11月": (
+                    <>
+                        InternetWeek 2025 NOC に L2/L3 チームとして参加
+                        <ExternalLink
+                            href="https://blog.nic.ad.jp/2025/11394/"
+                            label="IWNOC 2025 の JPNIC BLOG"
+                        >
+                            [記事]
+                        </ExternalLink>
+                    </>
+                ),
                 "2025年03月": (
                     <>
                         WebSpeedHackathon 2025 でスコア 8 / 123 位{" "}
                         <ExternalLink
-                            className="underline"
                             href="https://web-speed-hackathon-scoring-board-2025.fly.dev/"
                             label="WebSpeedHackathon 2025 のリーダーボード"
                         >
@@ -24,7 +51,6 @@ export const History: FC = () => (
                         ISUCON14 感想戦で 2 位{" "}
                         {/* やっぱりなんとかして母数書きたいよね */}
                         <ExternalLink
-                            className="underline"
                             href="https://zenn.dev/kawaemon/articles/529fd6a12ac43b"
                             label="ISUCON14 感想戦参加記へのリンク"
                         >
@@ -36,7 +62,6 @@ export const History: FC = () => (
                     <>
                         ISUCON14 でチームスコア 8 / 834 位{" "}
                         <ExternalLink
-                            className="underline"
                             href="https://zenn.dev/kawaemon/articles/f40529e0c447f5"
                             label="ISUCON14 本戦参加記へのリンク"
                         >
@@ -46,6 +71,7 @@ export const History: FC = () => (
                 ),
                 "2024年04月": "慶應義塾大学 総合政策学部に進学",
                 "2024年03月": "新居浜高専 電気情報工学科を卒業: 準学士（工学）",
+                "2022年09月": "株式会社オプティムで短期インターン",
                 "2022年03月": "株式会社ゆめみで活動開始",
                 "2021年03月":
                     "ProvinDevsチームとしてOpen Hack U 2020 Vol.5に出場",

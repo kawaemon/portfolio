@@ -9,7 +9,7 @@ interface Props {
 
 export const ExternalLink: FC<Props> = (props) => (
     <a
-        className={props.className}
+        className={props.className ?? "" + " underline break-keep"}
         target="_blank"
         rel="noopener noreferrer"
         href={props.href}
