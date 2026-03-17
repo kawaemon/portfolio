@@ -77,18 +77,18 @@ export const Skills: FC = () => {
                         https://github.com/rust-lang/cargo/pull/11579 */}
                 </Card>
                 <Card>
-                    <h4>React</h4>
+                    <h4>ネットワーク</h4>
                     <p className="text-gray-400">
-                        最近最前線は追えていませんが、書けはします。業務経験があります。
+                        大学ではインターネットの研究室に属し、AS
+                        運用やイベントネットワークの設営をしています。もっぱらアクセスネットワークを作っては壊してを繰り返しています。
                     </p>
-                    {/* https://github.com/kawaemon/portfolio */}
                 </Card>
                 <Card>
                     <h4>Linux</h4>
                     <p className="text-gray-400">
                         普段から Windows, macOS, Linux
                         を用途に応じて使い分けて使っています。 開発は主に Linux
-                        で行っているため、実用経験はあります。 git, vim, Docker
+                        で行っているため、実用経験があります。 git, vim, Docker
                         等使えます。
                     </p>
                     {/* https://github.com/kawaemon/dotfiles/ */}
@@ -98,7 +98,7 @@ export const Skills: FC = () => {
                     <p className="text-gray-400">
                         フロント, バック, RDBMS, S3
                         等組み合わせたインフラの運用経験があります。 主に GCP,
-                        AWS を、CDK を通して使っています。
+                        AWS, K8S を、CDK を通して使っています。
                     </p>
                     {/* (imei) */}
                 </Card>

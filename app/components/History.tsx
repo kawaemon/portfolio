@@ -20,7 +20,19 @@ export const History: FC = () => (
                             href="https://icttoracon.net/archives/10329"
                             label="ICTSC 二次予選結果"
                         >
-                            [二次予選-満点1位]
+                            [二次予選-満点1/32位]
+                        </ExternalLink>
+                        [本戦-4/15位]
+                    </>
+                ),
+                "2026年02月": (
+                    <>
+                        ChuNOG7 NOC に L2/L3 チームリーダーとして参加
+                        <ExternalLink
+                            href="https://chunog.connpass.com/event/368386"
+                            label="ChuNOG7 のイベントページ"
+                        >
+                            [connpass]
                         </ExternalLink>
                     </>
                 ),
