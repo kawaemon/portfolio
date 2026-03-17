@@ -21,13 +21,13 @@ export const History: FC = () => (
                             label="ICTSC 二次予選結果"
                         >
                             [二次予選-満点1/32位]
-                        </ExternalLink>
+                        </ExternalLink>{" "}
                         [本戦-4/15位]
                     </>
                 ),
                 "2026年02月": (
                     <>
-                        ChuNOG7 NOC に L2/L3 チームリーダーとして参加
+                        ChuNOG7 NOC に L2/L3 チームリーダーとして参加{" "}
                         <ExternalLink
                             href="https://chunog.connpass.com/event/368386"
                             label="ChuNOG7 のイベントページ"
@@ -38,7 +38,7 @@ export const History: FC = () => (
                 ),
                 "2025年11月": (
                     <>
-                        InternetWeek 2025 NOC に L2/L3 チームとして参加
+                        InternetWeek 2025 NOC に L2/L3 チームとして参加{" "}
                         <ExternalLink
                             href="https://blog.nic.ad.jp/2025/11394/"
                             label="IWNOC 2025 の JPNIC BLOG"
