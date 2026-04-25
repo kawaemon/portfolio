@@ -1,16 +1,16 @@
 import React, { FC, ReactNode } from "react";
 import { sit } from "../util";
 
-type Props = { children: Record<string, ReactNode>; className?: string };
+type Props = { children: Array<[string, ReactNode]>; className?: string };
 
 export const Table: FC<Props> = ({ children, className }) => (
     <table className={`w-full ${className ?? ""}`}>
         <tbody>
-            {Object.entries(children).map(([k, v], i) => (
+            {children.map(([k, v], i) => (
                 <tr
                     className={[
                         "pt-3",
-                        sit(i > 0, "border-t-1 border-gray-700"),
+                        sit(i > 0, "border-t border-gray-700"),
                     ].join(" ")}
                     key={k}
                 >

@@ -8,23 +8,23 @@ export const Profile: FC = () => {
         <section className="max-w-full space-y-4">
             <section>
                 <Table>
-                    {{
-                        ニックネーム: "かわえもん",
-                        所属: "慶應義塾大学 総合政策学部",
-                        趣味: <TouringGallery />,
-                        生年月日: "2003-07-08",
-                    }}
+                    {[
+                        ["ニックネーム", "かわえもん"],
+                        ["所属", "慶應義塾大学 総合政策学部"],
+                        ["趣味", <TouringGallery />],
+                        ["生年月日", "2003-07-08"],
+                    ]}
                 </Table>
             </section>
 
             <section>
                 <h3>検定</h3>
                 <Table>
-                    {{
-                        "TOEIC L&R": "835点",
-                        "TOEFL ITP": "530点",
-                        P検: "準2級",
-                    }}
+                    {[
+                        ["TOEIC L&R", "835点"],
+                        ["TOEFL ITP", "530点"],
+                        ["P検", "準2級"],
+                    ]}
                 </Table>
             </section>
 
