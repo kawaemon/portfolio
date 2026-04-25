@@ -10,7 +10,7 @@ export const History: FC = () => (
                 [
                     "2026年04月",
                     <>
-                        RubyKaigi2026 に NOC ヘルパーとして参加
+                        RubyKaigi2026 に NOC ヘルパーとして参加{" "}
                         <ExternalLink
                             href="https://rubykaigi.org/2026/about/"
                             label="RubyKaigi 2026 の about ページ"
