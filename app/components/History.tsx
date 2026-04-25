@@ -14,7 +14,7 @@ export const History: FC = () => (
                             href="https://rubykaigi.org/2026/about/"
                             label="RubyKaigi 2026 の about ページ"
                         >
-                            [順位表]
+                            [スタッフ一覧]
                         </ExternalLink>
                     </>
                 ),
