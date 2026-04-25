@@ -7,6 +7,28 @@ export const History: FC = () => (
         <h3>略歴</h3>
         <Table>
             {{
+                "2026年04月": (
+                    <>
+                        RubyKaigi2026 に NOC ヘルパーとして参加
+                        <ExternalLink
+                            href="https://rubykaigi.org/2026/about/"
+                            label="RubyKaigi 2026 の about ページ"
+                        >
+                            [順位表]
+                        </ExternalLink>
+                    </>
+                ),
+                "2026年03月": (
+                    <>
+                        WebSpeedHackathon 2026 でスコア 20 / 132 位{" "}
+                        <ExternalLink
+                            href="https://web-speed-hackathon-scoring-board-2026.fly.dev/"
+                            label="WebSpeedHackathon 2026 のリーダーボード"
+                        >
+                            [順位表]
+                        </ExternalLink>
+                    </>
+                ),
                 "2026年03月": (
                     <>
                         ICT トラブルシューティングコンテスト 2025 にチーム出場
