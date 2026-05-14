@@ -8,6 +8,18 @@ export const History: FC = () => (
         <Table>
             {[
                 [
+                    "2026年07月",
+                    <>
+                        JANOG58 NOC にて L2/L3 チームリーダーとして参加{" "}
+                        <ExternalLink
+                            href="https://www.janog.gr.jp/meeting/janog58/nocmember/"
+                            label="janog58 の NOC メンバーページ"
+                        >
+                            [スタッフ一覧]
+                        </ExternalLink>
+                    </>,
+                ],
+                [
                     "2026年04月",
                     <>
                         RubyKaigi2026 に NOC ヘルパーとして参加{" "}
