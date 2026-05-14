@@ -23,7 +23,6 @@ export const Profile: FC = () => {
                     {[
                         ["TOEIC L&R", "835点"],
                         ["TOEFL ITP", "530点"],
-                        ["P検", "準2級"],
                     ]}
                 </Table>
             </section>
