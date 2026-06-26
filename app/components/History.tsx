@@ -20,6 +20,18 @@ export const History: FC = () => (
                     </>,
                 ],
                 [
+                    "2026年06月",
+                    <>
+                        Interop 2026 Tokyo に ShowNet Team Member として参加{" "}
+                        <ExternalLink
+                            href="https://www.interop.jp/2026/shownet/noc/"
+                            label="ShowNet スタッフ一覧"
+                        >
+                            [スタッフ一覧]
+                        </ExternalLink>
+                    </>,
+                ],
+                [
                     "2026年04月",
                     <>
                         RubyKaigi2026 に NOC ヘルパーとして参加{" "}
