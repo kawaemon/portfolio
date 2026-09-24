@@ -10,12 +10,18 @@ export const History: FC = () => (
                 [
                     "2026年07月",
                     <>
-                        JANOG58 NOC にて L2/L3 チームリーダーとして参加{" "}
+                        JANOG58 NOC にて L2/L3 チームリーダーとして参加と登壇{" "}
                         <ExternalLink
                             href="https://www.janog.gr.jp/meeting/janog58/nocmember/"
                             label="janog58 の NOC メンバーページ"
                         >
                             [スタッフ一覧]
+                        </ExternalLink>
+                        <ExternalLink
+                            href="https://www.janog.gr.jp/meeting/janog58/pr-mac-address-explosion/"
+                            label="登壇内容"
+                        >
+                            [登壇内容]
                         </ExternalLink>
                     </>,
                 ],
@@ -79,10 +85,10 @@ export const History: FC = () => (
                     <>
                         ChuNOG7 NOC に L2/L3 チームリーダーとして参加{" "}
                         <ExternalLink
-                            href="https://chunog.connpass.com/event/368386"
-                            label="ChuNOG7 のイベントページ"
+                            href="https://www.nic.ad.jp/ja/tech/negi-noc.html"
+                            label="活動内容等"
                         >
-                            [connpass]
+                            [活動内容等]
                         </ExternalLink>
                     </>,
                 ],
