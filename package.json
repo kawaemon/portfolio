@@ -23,7 +23,7 @@
     },
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build --webpack",
         "typecheck": "next typegen && tsc --noEmit",
         "fmt": "oxfmt app",
         "lint": "oxlint app"
