@@ -37,7 +37,7 @@ export const Profile: FC = () => {
                 </List>
             </section>
 
-            {/* prettier-ignore */}
+            {/* oxfmt-ignore */}
             <p className="text-base/6">
                 四国生まれ四国育ち、高専出身の大学生です。
                 小学生の頃からコンピュータが好きで、電子工作やプログラミングを楽しんできました。

@@ -2,7 +2,6 @@ import React, { FC, ReactNode } from "react";
 import styles from "./Skills.module.css";
 import { ExternalLink } from "./base/ExternalLink";
 
-// eslint-disable-next-line @typescript-eslint/no-namespace
 namespace Card {
     export type Props = {
         children: ReactNode;

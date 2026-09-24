@@ -7,10 +7,9 @@ $start-duration: 1.5s;
 $float-one-cycle-duration: 2.5s;
 $float-delta: 2px;
 
-
 /* フェードインと回転が同時に終わるように */
-$start-rotate-duration:      $start-duration - $start-rotate-delay;
-$start-fadein-duration:      $start-duration - $start-fadein-delay;
+$start-rotate-duration: $start-duration - $start-rotate-delay;
+$start-fadein-duration: $start-duration - $start-fadein-delay;
 $start-rest-fadein-duration: $start-duration - $start-rest-fadein-delay;
 
 /* 開始アニメーション終了と同時に浮上開始 */
