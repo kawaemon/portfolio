@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { Twitter, GitHub, Key } from "react-feather";
+import Link from "next/link";
+import { Twitter, GitHub, Key, Tool } from "react-feather";
 
 import styles from "./Header.module.scss";
 import { HeaderLogo } from "./HeaderLogo";
@@ -42,6 +43,15 @@ export const Header: FC = () => {
                         >
                             <Key size={30} />
                         </ExternalLink>
+                    </li>
+                    <li>
+                        <Link
+                            href="/toolbox"
+                            aria-label="Toolbox"
+                            title="Toolbox"
+                        >
+                            <Tool size={30} />
+                        </Link>
                     </li>
                 </ul>
             </div>
